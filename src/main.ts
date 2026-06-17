@@ -1,60 +1,58 @@
-import './style.css'
-import typescriptLogo from './assets/typescript.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import { setupCounter } from './counter.ts'
+import './style.scss';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import Swiper from 'swiper';
+import 'swiper/css';
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-<section id="center">
-  <div class="hero">
-    <img src="${heroImg}" class="base" width="170" height="179">
-    <img src="${typescriptLogo}" class="framework" alt="TypeScript logo"/>
-    <img src="${viteLogo}" class="vite" alt="Vite logo" />
-  </div>
-  <div>
-    <h1>Get started</h1>
-    <p>Edit <code>src/main.ts</code> and save to test <code>HMR</code></p>
-  </div>
-  <button id="counter" type="button" class="counter"></button>
-</section>
+// Registrar plugin de GSAP
+gsap.registerPlugin(ScrollTrigger);
 
-<div class="ticks"></div>
+document.addEventListener('DOMContentLoaded', () => {
+  
+  // 1. Inicializar el Carrusel (Swiper)
+  const swiper = new Swiper('.mySwiper', {
+    slidesPerView: 1,
+    spaceBetween: 50,
+    speed: 800,
+    grabCursor: true,
+  });
 
-<section id="next-steps">
-  <div id="docs">
-    <svg class="icon" role="presentation" aria-hidden="true"><use href="/icons.svg#documentation-icon"></use></svg>
-    <h2>Documentation</h2>
-    <p>Your questions, answered</p>
-    <ul>
-      <li>
-        <a href="https://vite.dev/" target="_blank">
-          <img class="logo" src="${viteLogo}" alt="" />
-          Explore Vite
-        </a>
-      </li>
-      <li>
-        <a href="https://www.typescriptlang.org" target="_blank">
-          <img class="button-icon" src="${typescriptLogo}" alt="">
-          Learn more
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div id="social">
-    <svg class="icon" role="presentation" aria-hidden="true"><use href="/icons.svg#social-icon"></use></svg>
-    <h2>Connect with us</h2>
-    <p>Join the Vite community</p>
-    <ul>
-      <li><a href="https://github.com/vitejs/vite" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#github-icon"></use></svg>GitHub</a></li>
-      <li><a href="https://chat.vite.dev/" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#discord-icon"></use></svg>Discord</a></li>
-      <li><a href="https://x.com/vite_js" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#x-icon"></use></svg>X.com</a></li>
-      <li><a href="https://bsky.app/profile/vite.dev" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#bluesky-icon"></use></svg>Bluesky</a></li>
-    </ul>
-  </div>
-</section>
+  // 2. Lógica de los títulos interactivos inferiores
+  const navItems = document.querySelectorAll('.nav-item');
+  
+  navItems.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      swiper.slideTo(index); // Mueve el carrusel al slide correspondiente
+    });
+  });
 
-<div class="ticks"></div>
-<section id="spacer"></section>
-`
+  // Actualizar la clase "active" cuando el carrusel cambia
+  swiper.on('slideChange', () => {
+    navItems.forEach(el => el.classList.remove('active'));
+    navItems[swiper.activeIndex].classList.add('active');
+  });
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+  // 3. Crear la línea de tiempo de GSAP atada al Scroll
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.scroll-track',
+      start: 'top top',
+      end: 'bottom bottom',
+      scrub: 1, // Suaviza la animación para que siga el scroll del mouse
+    }
+  });
+
+  // Secuencia de animaciones al bajar el scroll:
+  tl.to('.hero-text', { opacity: 0, y: -50, duration: 1 }) // Desvanece texto inicial
+    .to('body', { backgroundColor: '#453a31', duration: 1.5 }, '<') // Cambia el color de fondo general
+    .to('.expandable-rect', {
+      width: '95vw',        // Se ensancha
+      height: '75vh',       // Sube y ocupa la pantalla
+      bottom: '15%',        // Deja espacio para la navegación
+      borderRadius: '20px', // Reduce el borde
+      duration: 2,
+      ease: 'power2.inOut'
+    }, '<') // El '<' hace que esta animación inicie al mismo tiempo que la anterior
+    .to('.swiper', { opacity: 1, duration: 0.5 }, '-=0.5') // Muestra el carrusel
+    .to('.carousel-nav', { opacity: 1, y: 0, duration: 1 }, '-=0.5'); // Aparecen los títulos inferiores
+});
