@@ -2,13 +2,45 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #1d211f; // Color inicial
   color: #fdfdfd;
-  transition: background-color 0.5s ease;
   overflow-x: hidden;
+  background-color: #0a0a0a;
 }
 
-// Variables
+.ambient-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  background-color: #0e0e0e;
+}
+
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.6;
+}
+
+.glow-1 {
+  width: 60vw;
+  height: 60vw;
+  background: rgba(243, 238, 228, 0.07);
+  top: -20%;
+  left: -15%;
+}
+
+.glow-2 {
+  width: 50vw;
+  height: 50vw;
+  background: rgba(255, 255, 255, 0.04);
+  bottom: -15%;
+  right: -10%;
+}
+
 $color-accent: #eab308;
 
 .navbar {
@@ -18,13 +50,11 @@ $color-accent: #eab308;
   z-index: 100;
 }
 
-// El track es alto para permitir hacer scroll
 .scroll-track {
-  height: 250vh; 
+  height: 350vh; 
   position: relative;
 }
 
-// El contenedor que se ancla a la pantalla
 .sticky-container {
   height: 100vh;
   width: 100vw;
@@ -46,13 +76,12 @@ $color-accent: #eab308;
   p { font-size: 1.2rem; color: #a0a0a0; max-width: 600px; margin: 0 auto; }
 }
 
-// El rectángulo inicial
 .expandable-rect {
   position: absolute;
-  bottom: -20%; // Escondido parcialmente abajo
+  bottom: -20%;
   width: 60vw;
   height: 40vh;
-  background: #f4f4f4; // Color interior del carrusel
+  background: #e8e4db;
   border-radius: 40px;
   overflow: hidden;
   z-index: 3;
@@ -62,20 +91,19 @@ $color-accent: #eab308;
   box-shadow: 0 -10px 50px rgba(0,0,0,0.3);
 }
 
-// Swiper estilos internos
 .swiper {
-  width: 100%; height: 100%; opacity: 0; // Oculto inicialmente
+  width: 100%; height: 100%; opacity: 0;
 }
+
 .swiper-slide {
   display: flex; align-items: center; justify-content: center;
   .slide-content { width: 300px; height: 400px; background: #ddd; border-radius: 15px; color: #333; display: flex; align-items: center; justify-content: center; }
 }
 
-// Navegación interactiva inferior
 .carousel-nav {
   position: absolute; bottom: 5%; width: 90vw;
   display: flex; justify-content: space-between;
-  opacity: 0; // Oculto inicialmente
+  opacity: 0;
   z-index: 4;
   transform: translateY(20px);
 
@@ -96,4 +124,4 @@ $color-accent: #eab308;
   }
 }
 
-.next-section { height: 100vh; background: #111; display: flex; align-items: center; justify-content: center; }
+.next-section { height: 100vh; display: flex; align-items: center; justify-content: center; }
