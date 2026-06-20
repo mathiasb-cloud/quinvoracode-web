@@ -19,29 +19,33 @@ body {
   height: 100vh;
   z-index: -1;
   overflow: hidden;
-  background-color: #080808;
+  background-color: #030716;
 }
 
 .glow {
   position: absolute;
   border-radius: 50%;
-  filter: blur(90px);
+  transform: translate(-50%, -50%);
 }
 
 .glow-1 {
-  width: 50vw;
-  height: 50vw;
-  background: rgba(224, 214, 196, 0.18);
-  top: -15%;
-  left: -15%;
+  width: 140vw;
+  height: 80vh;
+  background: #174291;
+  top: 70%;
+  left: 50%;
+  filter: blur(150px);
+  opacity: 0.8;
 }
 
 .glow-2 {
-  width: 60vw;
-  height: 60vw;
-  background: rgba(189, 172, 145, 0.15);
-  bottom: -15%;
-  right: -10%;
+  width: 100vw;
+  height: 40vh;
+  background: #dce7fa;
+  top: 80%;
+  left: 50%;
+  filter: blur(120px);
+  opacity: 0.9;
 }
 
 $color-accent: #eab308;
