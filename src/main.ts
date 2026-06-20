@@ -48,4 +48,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }, '<')
     .to('.swiper', { opacity: 1, duration: 0.5 }, '-=0.5')
     .to('.carousel-nav', { opacity: 1, y: 0, duration: 1 }, '-=0.5');
+
+  const navbar = document.querySelector('.navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 110) {
+      navbar?.classList.add('scrolled');
+    } else {
+      navbar?.classList.remove('scrolled');
+    }
+  });
 });

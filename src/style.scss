@@ -40,11 +40,31 @@ $color-accent: #eab308;
   position: fixed; 
   top: 0; 
   width: 100%;
-  padding: 2rem 4rem;
+  padding: 1.2rem 4rem;
   display: flex; 
   justify-content: space-between; 
   align-items: center;
   z-index: 100;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    z-index: -1;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+  }
+
+  &.scrolled::before {
+    opacity: 1;
+  }
 
   .logo {
     letter-spacing: 4px;
@@ -258,7 +278,7 @@ $color-accent: #eab308;
   position: relative;
   z-index: 10;
   background-color: #0d0d0d;
-  padding: 6rem 4rem;
+  padding: 7rem 1.2rem;
   min-height: 100vh;
   color: #fdfdfd;
 }
@@ -267,7 +287,7 @@ $color-accent: #eab308;
   margin-bottom: 2.5rem;
 
   .breadcrumb {
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     color: #e8e4db;
     margin-bottom: 1.5rem;
   }
