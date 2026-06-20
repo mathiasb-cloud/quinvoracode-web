@@ -37,9 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   tl.to('.hero-text', { opacity: 0, y: -50, duration: 1 })
-    .to('.ambient-bg', { backgroundColor: '#02040a', duration: 1.5 }, '<')
-    .to('.glow-1', { background: '#0a2254', duration: 1.5 }, '<')
-    .to('.glow-2', { background: '#1c3a7a', duration: 1.5 }, '<')
+    .to('.bg-overlay', { backgroundColor: 'rgba(3, 7, 18, 0.75)', duration: 1.5 }, '<')
     .to('.expandable-rect', {
       width: '95vw',
       height: '75vh',
