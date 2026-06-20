@@ -37,9 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   tl.to('.hero-text', { opacity: 0, y: -50, duration: 1 })
-    .to('.ambient-bg', { backgroundColor: '#171614', duration: 1.5 }, '<')
-    .to('.glow-1', { background: 'rgba(219, 196, 161, 0.12)', duration: 1.5 }, '<')
-    .to('.glow-2', { background: 'rgba(189, 172, 145, 0.08)', duration: 1.5 }, '<')
+    .to('.ambient-bg', { backgroundColor: '#02040a', duration: 1.5 }, '<')
+    .to('.glow-1', { background: '#0a2254', duration: 1.5 }, '<')
+    .to('.glow-2', { background: '#1c3a7a', duration: 1.5 }, '<')
     .to('.expandable-rect', {
       width: '95vw',
       height: '75vh',
