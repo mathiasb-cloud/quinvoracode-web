@@ -384,18 +384,16 @@ $color-accent: #eab308;
 
 
 
-/* ==========================================
+/* 
    RESPONSIVE DESIGN (MÓVILES Y TABLETS)
-   ========================================== */
+*/
 
-/* Pantallas medianas (Tablets/Laptops pequeñas) */
 @media (max-width: 1024px) {
   .hero-text h1 { font-size: 3.5rem; }
   .navbar { padding: 1.2rem 2rem; }
   .portfolio-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
-/* Pantallas pequeñas (Celulares) */
 @media (max-width: 768px) {
   /* Navbar */
   .navbar {
@@ -406,7 +404,6 @@ $color-accent: #eab308;
       letter-spacing: 2px; 
     }
     
-    /* Ocultamos los links centrales para que no choquen con el logo */
     nav { 
       display: none; 
     }
@@ -417,7 +414,6 @@ $color-accent: #eab308;
     }
   }
 
-  /* Hero Section */
   .hero-text {
     width: 95%;
     top: 25%;
@@ -433,7 +429,6 @@ $color-accent: #eab308;
     }
   }
 
-  /* Swiper Container inicial */
   .expandable-rect {
     width: 90vw;
     height: 40vh;
@@ -446,7 +441,6 @@ $color-accent: #eab308;
     height: 250px;
   }
 
-  /* Navigation Tabs (Scroll horizontal invisible para móvil) */
   .carousel-nav {
     width: 90vw;
     bottom: 8%;
@@ -455,7 +449,6 @@ $color-accent: #eab308;
     gap: 1.5rem;
     padding-bottom: 10px;
     
-    /* Ocultar barra de scroll nativa */
     &::-webkit-scrollbar { display: none; }
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -469,14 +462,13 @@ $color-accent: #eab308;
     }
   }
 
-  /* Portafolio Inferior */
   .portfolio-section {
     padding: 4rem 1.5rem;
   }
   
   .portfolio-header {
     .title-row h2 { font-size: 1.8rem; }
-    .view-controls { display: none; } /* Ocultamos iconos en móvil */
+    .view-controls { display: none; } 
   }
 
   .portfolio-grid { 
@@ -485,10 +477,9 @@ $color-accent: #eab308;
   }
 }
 
-/* Celulares muy pequeños (Pantallas angostas) */
 @media (max-width: 480px) {
   .hero-text h1 { font-size: 3.5rem; }
-  .portfolio-grid { grid-template-columns: 1fr; } /* 1 sola columna */
+  .portfolio-grid { grid-template-columns: 1fr; }
   
   .carousel-nav .nav-item {
     min-width: 120px;
