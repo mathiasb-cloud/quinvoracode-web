@@ -382,15 +382,116 @@ $color-accent: #eab308;
   }
 }
 
-@media (max-width: 1200px) {
+
+
+/* ==========================================
+   RESPONSIVE DESIGN (MÓVILES Y TABLETS)
+   ========================================== */
+
+/* Pantallas medianas (Tablets/Laptops pequeñas) */
+@media (max-width: 1024px) {
+  .hero-text h1 { font-size: 3.5rem; }
+  .navbar { padding: 1.2rem 2rem; }
   .portfolio-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
-@media (max-width: 900px) {
-  .portfolio-section { padding: 4rem 2rem; }
-  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+/* Pantallas pequeñas (Celulares) */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    padding: 1rem 1.5rem;
+    
+    .logo { 
+      font-size: 1.1rem; 
+      letter-spacing: 2px; 
+    }
+    
+    /* Ocultamos los links centrales para que no choquen con el logo */
+    nav { 
+      display: none; 
+    }
+    
+    .btn-contact { 
+      padding: 0.6rem 1.2rem; 
+      font-size: 0.8rem; 
+    }
+  }
+
+  /* Hero Section */
+  .hero-text {
+    width: 95%;
+    top: 25%;
+    
+    h1 { 
+      font-size: 2.2rem; 
+      margin-bottom: 1rem;
+    }
+    
+    p { 
+      font-size: 0.95rem; 
+      padding: 0 1rem;
+    }
+  }
+
+  /* Swiper Container inicial */
+  .expandable-rect {
+    width: 90vw;
+    height: 40vh;
+    bottom: -10%;
+    border-radius: 20px;
+  }
+  
+  .swiper-slide .slide-content {
+    width: 85%;
+    height: 250px;
+  }
+
+  /* Navigation Tabs (Scroll horizontal invisible para móvil) */
+  .carousel-nav {
+    width: 90vw;
+    bottom: 8%;
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    padding-bottom: 10px;
+    
+    /* Ocultar barra de scroll nativa */
+    &::-webkit-scrollbar { display: none; }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    
+    .nav-item {
+      min-width: 140px;
+      flex: 0 0 auto;
+      
+      h3 { font-size: 1.1rem; }
+      span { font-size: 0.7rem; }
+    }
+  }
+
+  /* Portafolio Inferior */
+  .portfolio-section {
+    padding: 4rem 1.5rem;
+  }
+  
+  .portfolio-header {
+    .title-row h2 { font-size: 1.8rem; }
+    .view-controls { display: none; } /* Ocultamos iconos en móvil */
+  }
+
+  .portfolio-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1rem;
+  }
 }
 
-@media (max-width: 600px) {
-  .portfolio-grid { grid-template-columns: 1fr; }
+/* Celulares muy pequeños (Pantallas angostas) */
+@media (max-width: 480px) {
+  .hero-text h1 { font-size: 3.5rem; }
+  .portfolio-grid { grid-template-columns: 1fr; } /* 1 sola columna */
+  
+  .carousel-nav .nav-item {
+    min-width: 120px;
+    h3 { font-size: 1rem; }
+  }
 }
