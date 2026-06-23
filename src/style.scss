@@ -44,7 +44,7 @@ $color-accent: #eab308;
   display: flex; 
   justify-content: space-between; 
   align-items: center;
-  z-index: 100;
+  z-index: 110;
   
   &::before {
     content: '';
@@ -89,23 +89,36 @@ $color-accent: #eab308;
       }
     }
   }
+} 
 
-  .btn-contact {
-    background-color: #e8e4db;
-    color: #0a0a0a;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 30px;
-    font-weight: 200;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
 
-    &:hover {
-      transform: scale(1.05);
-      background-color: #ffffff;
-    }
+.btn-contact {
+  background: rgba(255, 255, 255, 0.05); 
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+  color: #fdfdfd;
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.15); 
+    border: 1px solid rgba(255, 255, 255, 0.4);
   }
 }
+
+.mobile-hero-btn {
+  display: none; 
+}
+
+
 
 .scroll-track {
   height: 350vh; 
@@ -429,7 +442,7 @@ $color-accent: #eab308;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(5, 5, 7, 0.98); /* Fondo casi negro */
+  background-color: rgba(5, 5, 7, 0.98); 
   z-index: 101; 
   display: flex;
   align-items: center;
@@ -477,6 +490,7 @@ $color-accent: #eab308;
    RESPONSIVE DESIGN (MÓVILES Y TABLETS)
 */
 
+
 @media (max-width: 1024px) {
   .hero-text h1 { font-size: 3.5rem; }
   .navbar { padding: 1.2rem 2rem; }
@@ -484,114 +498,28 @@ $color-accent: #eab308;
 }
 
 @media (max-width: 768px) {
-  /* Navbar */
-  .navbar {
-    padding: 1rem 1.5rem;
-    
-    .logo { 
-      font-size: 1.1rem; 
-      letter-spacing: 2px; 
-    }
-    
-    nav { 
-      display: none; 
-    }
-    
-    .btn-contact { 
-      padding: 0.6rem 1.2rem; 
-      font-size: 0.8rem; 
-    }
-  }
-
-  .hero-text {
-    width: 95%;
-    top: 25%;
-    
-    h1 { 
-      font-size: 2.2rem; 
-      margin-bottom: 1rem;
-    }
-    
-    p { 
-      font-size: 0.95rem; 
-      padding: 0 1rem;
-    }
-  }
-
-  .expandable-rect {
-    width: 90vw;
-    height: 40vh;
-    bottom: -10%;
-    border-radius: 20px;
-  }
-  
-  .swiper-slide .slide-content {
-    width: 85%;
-    height: 250px;
-  }
-
-  .carousel-nav {
-    width: 90vw;
-    bottom: 8%;
-    overflow-x: auto;
-    justify-content: flex-start;
-    gap: 1.5rem;
-    padding-bottom: 10px;
-    
-    &::-webkit-scrollbar { display: none; }
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    
-    .nav-item {
-      min-width: 140px;
-      flex: 0 0 auto;
-      
-      h3 { font-size: 1.1rem; }
-      span { font-size: 0.7rem; }
-    }
-  }
-
-  .portfolio-section {
-    padding: 4rem 1.5rem;
-  }
-  
-  .portfolio-header {
-    .title-row h2 { font-size: 1.8rem; }
-    .view-controls { display: none; } 
-  }
-
-  .portfolio-grid { 
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-text h1 { font-size: 3.5rem; }
-  .portfolio-grid { grid-template-columns: 1fr; }
-  
-  .carousel-nav .nav-item {
-    min-width: 120px;
-    h3 { font-size: 1rem; }
-  }
-}
-
-
-@media (max-width: 768px) {
+  /* Navbar Móvil */
   .navbar {
     padding: 1rem 1.5rem;
     .logo { font-size: 1.1rem; letter-spacing: 2px; }
+    .btn-contact { display: none; } 
   }
 
   .desktop-nav { display: none !important; }
-  .btn-contact { display: none; }
   .menu-toggle { display: flex; }
 
   .hero-text {
     width: 95%;
     top: 25%;
+    text-align: center;
+    
     h1 { font-size: 3.8rem; margin-bottom: 1rem; }
     p { font-size: 0.95rem; padding: 0 1rem; }
+  }
+
+  .mobile-hero-btn {
+    display: inline-block;
+    margin-top: 1.5rem; 
   }
 
   .expandable-rect {
@@ -626,4 +554,14 @@ $color-accent: #eab308;
   .portfolio-header .title-row h2 { font-size: 1.8rem; }
   .portfolio-header .view-controls { display: none; }
   .portfolio-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 { font-size: 3.5rem; } 
+  .portfolio-grid { grid-template-columns: 1fr; }
+  
+  .carousel-nav .nav-item {
+    min-width: 120px;
+    h3 { font-size: 1rem; }
+  }
 }

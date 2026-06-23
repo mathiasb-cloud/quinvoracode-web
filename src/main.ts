@@ -71,4 +71,14 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflow = '';
     }
   });
+
+  const mobileLinks = document.querySelectorAll('.mobile-nav-overlay a');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menuToggle?.classList.remove('active');
+      mobileNav?.classList.remove('active');
+      document.body.style.overflow = ''; 
+    });
+  });
+
 });
