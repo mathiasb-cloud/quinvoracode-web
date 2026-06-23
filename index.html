@@ -15,13 +15,31 @@
     <div id="app">
       <header class="navbar">
         <div class="logo">QUINVORA CODE</div>
-        <nav>
+        
+        <nav class="desktop-nav">
           <a href="#">Home</a>
           <a href="#">Work</a>
           <a href="#">About</a>
         </nav>
-        <button class="btn-contact">Contact Us</button>
+        
+        <div class="header-buttons">
+          <button class="btn-contact">Contact Us</button>
+          <button class="menu-toggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </header>
+
+      <div class="mobile-nav-overlay">
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">Work</a>
+          <a href="#">About</a>
+          <a href="#" class="mobile-contact">Contact Us</a>
+        </nav>
+      </div>
 
       <section class="scroll-track">
         <div class="sticky-container">
