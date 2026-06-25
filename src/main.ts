@@ -46,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
       duration: 2,
       ease: 'power2.inOut'
     }, '<')
-    .to('.swiper', { opacity: 1, duration: 0.5 }, '-=0.5')
     .to('.carousel-nav', { opacity: 1, y: 0, duration: 1 }, '-=0.5');
 
   const navbar = document.querySelector('.navbar');
@@ -80,5 +79,27 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflow = ''; 
     });
   });
+
+  const starsContainer = document.getElementById('stars-container');
+  const numberOfStars = 80; 
+
+  for (let i = 0; i < numberOfStars; i++) {
+    const star = document.createElement('div');
+    star.classList.add('star');
+    
+    const duration = Math.random() * (7 - 4) + 4; 
+    const delay = Math.random() * 4; 
+    const size = Math.random() * 2 + 1; 
+
+    star.style.left = `${Math.random() * 100}vw`;
+    star.style.top = `${Math.random() * 100}vh`;
+    
+    star.style.width = `${size}px`;
+    star.style.height = `${size}px`;
+    star.style.animationDuration = `${duration}s`;
+    star.style.animationDelay = `${delay}s`;
+
+    starsContainer?.appendChild(star);
+  }
 
 });
