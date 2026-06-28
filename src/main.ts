@@ -102,4 +102,34 @@ document.addEventListener('DOMContentLoaded', () => {
     starsContainer?.appendChild(star);
   }
 
+
+
+
+  const revealText = document.querySelector('.scroll-reveal-text');
+  
+  if (revealText) {
+
+    const words = revealText.textContent?.split(' ') || [];
+    revealText.innerHTML = '';
+    
+    words.forEach(word => {
+      const span = document.createElement('span');
+      span.textContent = word + ' '; 
+      revealText.appendChild(span);
+    });
+
+    gsap.to('.scroll-reveal-text span', {
+      color: '#ffffff', 
+      stagger: 0.2, 
+      scrollTrigger: {
+        trigger: '.features-section',
+        start: 'top 65%', 
+        end: 'center 40%', 
+        scrub: 1, 
+      }
+    });
+  }
+
+
+
 });
