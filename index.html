@@ -118,64 +118,200 @@
         </div>
       </section>
       
-      <section class="portfolio-section">
-        <div class="portfolio-header">
-          <div class="breadcrumb">Our Work</div>
-          <hr class="divider">
-          <div class="title-row">
-            <h2>Selected Work</h2>
-            <a href="#" class="see-all">See All</a>
-          </div>
-          <div class="view-controls">
-            <svg viewBox="0 0 24 24" class="icon active"><path fill="currentColor" d="M3 3h8v8H3zm10 0h8v8h-8zM3 13h8v8H3zm10 0h8v8h-8z"/></svg>
-            <svg viewBox="0 0 24 24" class="icon"><path fill="currentColor" d="M3 3h4v4H3zm6 0h4v4H9zm6 0h4v4h-4zM3 9h4v4H3zm6 0h4v4H9zm6 0h4v4h-4zM3 15h4v4H3zm6 0h4v4H9zm6 0h4v4h-4z"/></svg>
-            <svg viewBox="0 0 24 24" class="icon"><path fill="currentColor" d="M3 3h8v18H3zm10 0h8v18h-8z"/></svg>
-            <svg viewBox="0 0 24 24" class="icon"><path fill="currentColor" d="M3 4h18v2H3zm0 7h18v2H3zm0 7h18v2H3z"/></svg>
-          </div>
+      <!-- ==========================================================
+           SELECTED WORK
+           Sustituye cada <img src="..."> por tus imágenes.
+           Tamaños recomendados:
+             · .work-card--wide  →  1800 x 900 px
+             · resto de tarjetas →  1200 x 1500 px
+           El atributo data-cat controla el filtro (web / brand / system).
+           ========================================================== -->
+      <section class="work" id="work">
+        <div class="work__rules" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
         </div>
 
-        <div class="portfolio-grid">
-          <div class="portfolio-item">
-            <div class="image-wrapper">
-              <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop" alt="Proyecto 1">
+        <div class="work__inner">
+          <header class="work__head">
+            <div class="work__eyebrow"><i></i>Our Work</div>
+
+            <div class="work__headline">
+              <h2 class="work__title">Selected Work</h2>
+
+              <div class="work__aside">
+                <p class="work__lede">A short selection of the products we design, build and maintain — from brand systems to software running in production.</p>
+                <div class="work__meta">
+                  <span class="work__count"><b data-count>00</b><em>Projects</em></span>
+                  <a href="#" class="work__all">See all<i></i></a>
+                </div>
+              </div>
             </div>
-            <h3>LAVELY MUSIC</h3>
-          </div>
-          
-          <div class="portfolio-item">
-            <div class="image-wrapper">
-              <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?q=80&w=800&auto=format&fit=crop" alt="Proyecto 2">
-            </div>
-            <h3>MEGA PERTAMA UNGGUL</h3>
-          </div>
-          
-          <div class="portfolio-item">
-            <div class="image-wrapper">
-              <img src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?q=80&w=800&auto=format&fit=crop" alt="Proyecto 3">
-            </div>
-            <h3>FORMINDO</h3>
-          </div>
-          
-          <div class="portfolio-item">
-            <div class="image-wrapper">
-              <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop" alt="Proyecto 4">
-            </div>
-            <h3>SUMBER ANUGERAH SHIPYARD</h3>
+
+            <nav class="work__filters" aria-label="Filtrar proyectos">
+              <button type="button" class="work__filter is-active" data-filter="all">All</button>
+              <button type="button" class="work__filter" data-filter="web">Web</button>
+              <button type="button" class="work__filter" data-filter="brand">Brand</button>
+              <button type="button" class="work__filter" data-filter="system">Systems</button>
+            </nav>
+
+            <div class="work__rule"></div>
+          </header>
+
+          <div class="work__grid">
+
+            <article class="work-card work-card--wide" data-cat="brand web">
+              <a class="work-card__link" href="#">
+                <div class="work-card__frame">
+                  <div class="work-card__media">
+                    <img class="work-card__img" src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1600&auto=format&fit=crop" alt="Lavely Music" loading="lazy">
+                  </div>
+                  <span class="work-card__sheen"></span>
+                </div>
+                <div class="work-card__bar"></div>
+                <div class="work-card__row">
+                  <div class="work-card__id">
+                    <span class="work-card__num">01</span>
+                    <h3 class="work-card__name">Lavely Music</h3>
+                  </div>
+                  <div class="work-card__tail">
+                    <span class="work-card__tags">Brand identity · Web</span>
+                    <span class="work-card__year">2024</span>
+                    <span class="work-card__go" aria-hidden="true">
+                      <svg viewBox="0 0 16 16"><path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.8M11.5 4.5v5.7" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <article class="work-card" data-cat="web">
+              <a class="work-card__link" href="#">
+                <div class="work-card__frame">
+                  <div class="work-card__media">
+                    <img class="work-card__img" src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?q=80&w=1200&auto=format&fit=crop" alt="Mega Pertama Unggul" loading="lazy">
+                  </div>
+                  <span class="work-card__sheen"></span>
+                </div>
+                <div class="work-card__bar"></div>
+                <div class="work-card__row">
+                  <div class="work-card__id">
+                    <span class="work-card__num">02</span>
+                    <h3 class="work-card__name">Mega Pertama Unggul</h3>
+                  </div>
+                  <div class="work-card__tail">
+                    <span class="work-card__tags">Corporate platform</span>
+                    <span class="work-card__year">2024</span>
+                    <span class="work-card__go" aria-hidden="true">
+                      <svg viewBox="0 0 16 16"><path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.8M11.5 4.5v5.7" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <article class="work-card" data-cat="system">
+              <a class="work-card__link" href="#">
+                <div class="work-card__frame">
+                  <div class="work-card__media">
+                    <img class="work-card__img" src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?q=80&w=1200&auto=format&fit=crop" alt="Formindo" loading="lazy">
+                  </div>
+                  <span class="work-card__sheen"></span>
+                </div>
+                <div class="work-card__bar"></div>
+                <div class="work-card__row">
+                  <div class="work-card__id">
+                    <span class="work-card__num">03</span>
+                    <h3 class="work-card__name">Formindo</h3>
+                  </div>
+                  <div class="work-card__tail">
+                    <span class="work-card__tags">Design system</span>
+                    <span class="work-card__year">2023</span>
+                    <span class="work-card__go" aria-hidden="true">
+                      <svg viewBox="0 0 16 16"><path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.8M11.5 4.5v5.7" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <article class="work-card" data-cat="brand">
+              <a class="work-card__link" href="#">
+                <div class="work-card__frame">
+                  <div class="work-card__media">
+                    <img class="work-card__img" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop" alt="Sumber Anugerah Shipyard" loading="lazy">
+                  </div>
+                  <span class="work-card__sheen"></span>
+                </div>
+                <div class="work-card__bar"></div>
+                <div class="work-card__row">
+                  <div class="work-card__id">
+                    <span class="work-card__num">04</span>
+                    <h3 class="work-card__name">Sumber Anugerah</h3>
+                  </div>
+                  <div class="work-card__tail">
+                    <span class="work-card__tags">Brand identity</span>
+                    <span class="work-card__year">2023</span>
+                    <span class="work-card__go" aria-hidden="true">
+                      <svg viewBox="0 0 16 16"><path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.8M11.5 4.5v5.7" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <article class="work-card" data-cat="web">
+              <a class="work-card__link" href="#">
+                <div class="work-card__frame">
+                  <div class="work-card__media">
+                    <img class="work-card__img" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="Proyecto Alpha" loading="lazy">
+                  </div>
+                  <span class="work-card__sheen"></span>
+                </div>
+                <div class="work-card__bar"></div>
+                <div class="work-card__row">
+                  <div class="work-card__id">
+                    <span class="work-card__num">05</span>
+                    <h3 class="work-card__name">Proyecto Alpha</h3>
+                  </div>
+                  <div class="work-card__tail">
+                    <span class="work-card__tags">Web application</span>
+                    <span class="work-card__year">2025</span>
+                    <span class="work-card__go" aria-hidden="true">
+                      <svg viewBox="0 0 16 16"><path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.8M11.5 4.5v5.7" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <article class="work-card" data-cat="system web">
+              <a class="work-card__link" href="#">
+                <div class="work-card__frame">
+                  <div class="work-card__media">
+                    <img class="work-card__img" src="https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=1200&auto=format&fit=crop" alt="Sistema de Inventario" loading="lazy">
+                  </div>
+                  <span class="work-card__sheen"></span>
+                </div>
+                <div class="work-card__bar"></div>
+                <div class="work-card__row">
+                  <div class="work-card__id">
+                    <span class="work-card__num">06</span>
+                    <h3 class="work-card__name">Sistema de Inventario</h3>
+                  </div>
+                  <div class="work-card__tail">
+                    <span class="work-card__tags">Product · Systems</span>
+                    <span class="work-card__year">2025</span>
+                    <span class="work-card__go" aria-hidden="true">
+                      <svg viewBox="0 0 16 16"><path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.8M11.5 4.5v5.7" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
           </div>
 
-          <div class="portfolio-item">
-            <div class="image-wrapper">
-              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop" alt="Proyecto 5">
-            </div>
-            <h3>NUEVO PROYECTO ALPHA</h3>
-          </div>
-
-          <div class="portfolio-item">
-            <div class="image-wrapper">
-              <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=800&auto=format&fit=crop" alt="Proyecto 6">
-            </div>
-            <h3>SISTEMA DE INVENTARIO</h3>
-          </div>
+          <p class="work__empty" aria-live="polite">No projects in this category yet.</p>
         </div>
       </section>
     </div>
