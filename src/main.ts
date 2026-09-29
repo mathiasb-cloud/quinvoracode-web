@@ -1,329 +1,327 @@
 import './style.scss';
+import './styles/home.scss';
+import './styles/footer.scss';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import Flip from 'gsap/Flip';
-import SplitText from 'gsap/SplitText';
 import Swiper from 'swiper';
 import 'swiper/css';
-
-gsap.registerPlugin(ScrollTrigger, Flip, SplitText);
+import { initShared, reducedMotion, scrollToY } from './shared';
 
 document.addEventListener('DOMContentLoaded', () => {
+  initShared();
+  initHero();
+  initFeatureText();
+  initServices();
+  initSolutions();
+  initProcess();
+  initSecurity();
+  initTestimonials();
+  initFaq();
+  initUptimeBars();
+});
+
+
+/* ============================================================
+   HERO · carrusel guiado por el scroll
+   Tras la intro, cada barra se llena con el scroll; al llenarse
+   pasa a la siguiente imagen. Tras la 3ª, la página continúa.
+   ============================================================ */
+function initHero(): void {
+  const navItems = Array.from(document.querySelectorAll<HTMLElement>('.carousel-nav .nav-item'));
+  const fills = navItems.map(item => item.querySelector<HTMLElement>('.progress-fill'));
+  const nav = document.querySelector<HTMLElement>('.carousel-nav');
+  if (!document.querySelector('.scroll-track') || !navItems.length) return;
+
   const swiper = new Swiper('.mySwiper', {
     slidesPerView: 1,
     spaceBetween: 50,
-    speed: 800,
-    grabCursor: true,
+    speed: 900,
+    allowTouchMove: false,
   });
 
-  const navItems = document.querySelectorAll('.nav-item');
-  
-  navItems.forEach((item, index) => {
-    item.addEventListener('click', () => {
-      swiper.slideTo(index);
-    });
-  });
+  const SLIDE = 2; // duración de cada barra, en unidades del timeline
+  const tl = gsap.timeline({ paused: true });
 
-  swiper.on('slideChange', () => {
-    navItems.forEach(el => el.classList.remove('active'));
-    navItems[swiper.activeIndex].classList.add('active');
-  });
-
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.scroll-track',
-      start: 'top top',
-      end: '+=2000', 
-      scrub: 2.5, 
-    }
-  });
+  // En móvil el recuadro final es apaisado para que las imágenes (2:1) se vean enteras
+  const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
 
   tl.to('.hero-text', { opacity: 0, y: -50, duration: 1 })
     .to('.bg-overlay', { backgroundColor: 'rgba(3, 7, 18, 0.75)', duration: 1.5 }, '<')
     .to('.expandable-rect', {
-      width: '95vw',
-      height: '75vh',
-      bottom: '15%',
+      width: () => (isMobile() ? '92vw' : '95vw'),
+      height: () => (isMobile() ? '54vw' : '75vh'),
+      bottom: () => (isMobile() ? '30%' : '15%'),
       borderRadius: '20px',
       duration: 2,
       ease: 'power2.inOut'
     }, '<')
     .to('.carousel-nav', { opacity: 1, y: 0, duration: 1 }, '-=0.5');
 
-  const navbar = document.querySelector('.navbar');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 110) {
-      navbar?.classList.add('scrolled');
-    } else {
-      navbar?.classList.remove('scrolled');
+  const starts: number[] = [];
+  fills.forEach(fill => {
+    starts.push(tl.duration() + 0.2);
+    tl.fromTo(fill, { scaleX: 0 }, { scaleX: 1, duration: SLIDE, ease: 'none' }, '+=0.2');
+  });
+  tl.to({}, { duration: 0.8 }); // pausa con la 3ª barra llena antes de soltar la sección
+
+  let current = -1;
+  const setActive = (index: number) => {
+    if (index === current) return;
+    current = index;
+    swiper.slideTo(index);
+    navItems.forEach((item, i) => {
+      item.classList.toggle('active', i === index);
+      item.classList.toggle('done', i < index);
+    });
+    // En móvil la fila de títulos tiene scroll horizontal: mantener visible el activo
+    const item = navItems[index];
+    if (nav && item && nav.scrollWidth > nav.clientWidth) {
+      nav.scrollTo({ left: item.offsetLeft - 16, behavior: 'smooth' });
     }
+  };
+
+  // La diapositiva cambia cuando su barra está llena de verdad (tiempo del timeline, no del scroll)
+  tl.eventCallback('onUpdate', () => {
+    const time = tl.time();
+    let index = 0;
+    starts.forEach((start, i) => {
+      if (i < starts.length - 1 && time >= start + SLIDE) index = i + 1;
+    });
+    setActive(index);
+  });
+  setActive(0);
+
+  const trigger = ScrollTrigger.create({
+    animation: tl,
+    trigger: '.scroll-track',
+    start: 'top top',
+    end: 'bottom bottom',
+    scrub: 1.4,
+    invalidateOnRefresh: true,
   });
 
-  const menuToggle = document.querySelector('.menu-toggle');
-  const mobileNav = document.querySelector('.mobile-nav-overlay');
-
-  menuToggle?.addEventListener('click', () => {
-    menuToggle.classList.toggle('active');
-    mobileNav?.classList.toggle('active');
-    
-    if (mobileNav?.classList.contains('active')) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-  });
-
-  const mobileLinks = document.querySelectorAll('.mobile-nav-overlay a');
-  mobileLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      menuToggle?.classList.remove('active');
-      mobileNav?.classList.remove('active');
-      document.body.style.overflow = ''; 
+  // Clic en un título: lleva el scroll al tramo de esa diapositiva
+  navItems.forEach((item, i) => {
+    item.addEventListener('click', () => {
+      const time = i === 0 ? starts[0] : starts[i] + 0.02;
+      scrollToY(trigger.start + (time / tl.duration()) * (trigger.end - trigger.start));
     });
   });
-
-  const starsContainer = document.getElementById('stars-container');
-  const numberOfStars = 80; 
-
-  for (let i = 0; i < numberOfStars; i++) {
-    const star = document.createElement('div');
-    star.classList.add('star');
-    
-    const duration = Math.random() * (7 - 4) + 4; 
-    const delay = Math.random() * 4; 
-    const size = Math.random() * 2 + 1; 
-
-    star.style.left = `${Math.random() * 100}vw`;
-    star.style.top = `${Math.random() * 100}vh`;
-    
-    star.style.width = `${size}px`;
-    star.style.height = `${size}px`;
-    star.style.animationDuration = `${duration}s`;
-    star.style.animationDelay = `${delay}s`;
-
-    starsContainer?.appendChild(star);
-  }
+}
 
 
-
-
+/* ---------- Texto que se ilumina palabra a palabra ---------- */
+function initFeatureText(): void {
   const revealText = document.querySelector('.scroll-reveal-text');
-  
-  if (revealText) {
+  if (!revealText) return;
 
-    const words = revealText.textContent?.split(' ') || [];
-    revealText.innerHTML = '';
-    
-    words.forEach(word => {
-      const span = document.createElement('span');
-      span.textContent = word + ' '; 
-      revealText.appendChild(span);
-    });
+  const words = revealText.textContent?.split(' ') || [];
+  revealText.innerHTML = '';
+  words.forEach(word => {
+    const span = document.createElement('span');
+    span.textContent = word + ' ';
+    revealText.appendChild(span);
+  });
 
-    gsap.to('.scroll-reveal-text span', {
-      color: '#ffffff', 
-      stagger: 0.2, 
-      scrollTrigger: {
-        trigger: '.features-section',
-        start: 'top 65%', 
-        end: 'center 40%', 
-        scrub: 1, 
-      }
-    });
-  }
-
-
-
-  initWorkSection();
-
-});
+  gsap.to('.scroll-reveal-text span', {
+    color: '#ffffff',
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: '.features-section',
+      start: 'top 65%',
+      end: 'center 40%',
+      scrub: 1,
+    },
+  });
+}
 
 
 /* ============================================================
-   SELECTED WORK
-   Revelado por máscara + parallax interno + filtrado con Flip.
+   SERVICES · la pestaña activa y su barra siguen al scroll
    ============================================================ */
-function initWorkSection(): void {
-  const section = document.querySelector<HTMLElement>('.work');
-  const grid = section?.querySelector<HTMLElement>('.work__grid');
-  if (!section || !grid) return;
+function initServices(): void {
+  const tabs = Array.from(document.querySelectorAll<HTMLButtonElement>('.services__tab'));
+  const cards = tabs.map(tab => document.getElementById(tab.dataset.target || ''));
+  if (!tabs.length || cards.some(card => !card)) return;
 
-  const cards = Array.from(section.querySelectorAll<HTMLElement>('.work-card'));
-  if (!cards.length) return;
+  const bars = tabs.map(tab => tab.querySelector<HTMLElement>('.services__bar b'));
+  const setActive = (index: number) => tabs.forEach((tab, i) => tab.classList.toggle('is-active', i === index));
 
-  const filters = Array.from(section.querySelectorAll<HTMLButtonElement>('.work__filter'));
-  const counter = section.querySelector<HTMLElement>('[data-count]');
-  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  const visibleCards = () => cards.filter(card => !card.classList.contains('is-hidden'));
-
-  /* La columna derecha baja para romper la simetría de la rejilla.
-     Se calcula sobre las tarjetas visibles, no sobre el orden del DOM,
-     para que el filtro nunca deje huecos. */
-  const applyOffsets = () => {
-    let column = 0;
-    visibleCards().forEach(card => {
-      if (card.classList.contains('work-card--wide')) {
-        card.classList.remove('is-offset');
-        column = 0;
-        return;
-      }
-      card.classList.toggle('is-offset', column === 1);
-      column = column === 0 ? 1 : 0;
-    });
-  };
-
-  const setCount = (value: number, animate = true) => {
-    if (!counter) return;
-    const pad = (n: number) => String(n).padStart(2, '0');
-
-    if (!animate || reduced) {
-      counter.textContent = pad(value);
-      return;
-    }
-
-    const proxy = { v: parseInt(counter.textContent || '0', 10) };
-    gsap.to(proxy, {
-      v: value,
-      duration: 0.9,
-      ease: 'power2.out',
-      onUpdate: () => { counter.textContent = pad(Math.round(proxy.v)); },
-    });
-  };
-
-  applyOffsets();
-
-  if (reduced) {
-    setCount(cards.length, false);
-  } else {
-    // Retícula vertical de fondo
-    gsap.to(section.querySelectorAll('.work__rules span'), {
-      scaleY: 1,
-      duration: 1.6,
-      ease: 'power2.inOut',
-      stagger: 0.08,
-      scrollTrigger: { trigger: section, start: 'top 85%' },
-    });
-
-    // Filete bajo la cabecera
-    gsap.to(section.querySelector('.work__rule'), {
-      scaleX: 1,
-      duration: 1.4,
-      ease: 'power3.inOut',
-      scrollTrigger: { trigger: '.work__head', start: 'top 72%' },
-    });
-
-    // Titular: cada línea sube desde su propia máscara
-    const title = section.querySelector<HTMLElement>('.work__title');
-    if (title) {
-      const split = SplitText.create(title, { type: 'lines', mask: 'lines', autoSplit: true });
-      gsap.from(split.lines, {
-        yPercent: 120,
-        duration: 1.15,
-        ease: 'expo.out',
-        stagger: 0.1,
-        scrollTrigger: { trigger: title, start: 'top 85%' },
-      });
-    }
-
-    gsap.from(section.querySelectorAll('.work__eyebrow, .work__lede, .work__meta, .work__filter'), {
-      y: 24,
-      opacity: 0,
-      duration: 0.9,
-      ease: 'power3.out',
-      stagger: 0.07,
-      scrollTrigger: { trigger: '.work__head', start: 'top 78%' },
-    });
-
-    // Cada tarjeta se descubre de abajo a arriba mientras la imagen sale del zoom
-    cards.forEach(card => {
-      gsap.timeline({ scrollTrigger: { trigger: card, start: 'top 82%' } })
-        .from(card.querySelector('.work-card__frame'), {
-          clipPath: 'inset(0% 0% 100% 0%)',
-          duration: 1.3,
-          ease: 'expo.out',
-        })
-        .from(card.querySelector('.work-card__media'), {
-          scale: 1.3,
-          duration: 1.6,
-          ease: 'expo.out',
-        }, 0)
-        .from(card.querySelector('.work-card__bar'), {
-          scaleX: 0,
-          duration: 1,
-          ease: 'power3.out',
-        }, 0.3)
-        .from(card.querySelectorAll('.work-card__row > *'), {
-          yPercent: 70,
-          opacity: 0,
-          duration: 0.85,
-          ease: 'power3.out',
-          stagger: 0.08,
-        }, 0.35);
-    });
-
-    // Parallax dentro del marco (solo escritorio)
-    gsap.matchMedia().add('(min-width: 769px)', () => {
-      cards.forEach(card => {
-        gsap.fromTo(
-          card.querySelector('.work-card__media'),
-          { yPercent: -4 },
-          {
-            yPercent: 4,
-            ease: 'none',
-            scrollTrigger: { trigger: card, start: 'top bottom', end: 'bottom top', scrub: true },
-          }
-        );
-      });
-    });
-
+  cards.forEach((card, i) => {
     ScrollTrigger.create({
-      trigger: '.work__head',
-      start: 'top 75%',
-      once: true,
-      onEnter: () => setCount(visibleCards().length),
-    });
-  }
-
-  // Filtrado: Flip anima la rejilla entera de un layout al siguiente
-  filters.forEach(btn => {
-    btn.addEventListener('click', () => {
-      if (btn.classList.contains('is-active')) return;
-
-      const filter = btn.dataset.filter || 'all';
-      filters.forEach(other => other.classList.toggle('is-active', other === btn));
-
-      const state = Flip.getState(cards);
-
-      cards.forEach(card => {
-        const cats = (card.dataset.cat || '').split(' ');
-        card.classList.toggle('is-hidden', filter !== 'all' && !cats.includes(filter));
-      });
-
-      applyOffsets();
-
-      const count = visibleCards().length;
-      section.classList.toggle('is-empty', count === 0);
-      setCount(count);
-
-      if (reduced || count === 0) {
-        ScrollTrigger.refresh();
-        return;
-      }
-
-      Flip.from(state, {
-        duration: 0.8,
-        ease: 'power3.inOut',
-        absolute: true,
-        stagger: 0.03,
-        onEnter: els => gsap.fromTo(
-          els,
-          { opacity: 0, scale: 0.92 },
-          { opacity: 1, scale: 1, duration: 0.55, delay: 0.12, ease: 'power2.out' }
-        ),
-        onLeave: els => gsap.to(els, { opacity: 0, scale: 0.92, duration: 0.35, ease: 'power2.in' }),
-        onComplete: () => ScrollTrigger.refresh(),
-      });
+      trigger: card,
+      start: 'top 62%',
+      end: 'bottom 62%',
+      onToggle: self => { if (self.isActive) setActive(i); },
+      onUpdate: self => { if (bars[i]) gsap.set(bars[i], { scaleX: self.progress }); },
     });
   });
+
+  tabs.forEach((tab, i) => {
+    tab.addEventListener('click', () => {
+      const card = cards[i]!;
+      scrollToY(card.getBoundingClientRect().top + window.scrollY - 140);
+    });
+  });
+}
+
+
+/* ============================================================
+   SOLUTIONS · pestañas con indicador deslizante
+   ============================================================ */
+function initSolutions(): void {
+  const wrap = document.querySelector<HTMLElement>('.pill-tabs');
+  const glider = wrap?.querySelector<HTMLElement>('.pill-tabs__glider');
+  if (!wrap || !glider) return;
+
+  const buttons = Array.from(wrap.querySelectorAll<HTMLButtonElement>('.pill-tabs__btn'));
+  const activeButton = () => buttons.find(btn => btn.classList.contains('is-active')) ?? buttons[0];
+
+  const moveGlider = (btn: HTMLElement) => {
+    glider.style.width = `${btn.offsetWidth}px`;
+    glider.style.transform = `translateX(${btn.offsetLeft}px)`;
+  };
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(other => {
+        const on = other === btn;
+        other.classList.toggle('is-active', on);
+        other.setAttribute('aria-selected', String(on));
+        const panel = document.getElementById(other.dataset.panel || '');
+        panel?.classList.toggle('is-active', on);
+        panel?.setAttribute('aria-hidden', String(!on));
+      });
+      moveGlider(btn);
+    });
+  });
+
+  moveGlider(activeButton());
+  window.addEventListener('resize', () => moveGlider(activeButton()));
+  document.fonts?.ready.then(() => moveGlider(activeButton()));
+}
+
+
+/* ============================================================
+   PROCESS · índice 01/02/03 y tarjetas que se oscurecen al apilarse
+   ============================================================ */
+function initProcess(): void {
+  const stack = document.querySelector<HTMLElement>('.process__stack');
+  const labels = Array.from(document.querySelectorAll<HTMLElement>('.process__index > div'));
+  const fills = labels.map(label => label.querySelector<HTMLElement>('b'));
+  const cards = Array.from(document.querySelectorAll<HTMLElement>('.step-card'));
+  if (!stack || !labels.length) return;
+
+  const steps = labels.length;
+
+  ScrollTrigger.create({
+    trigger: stack,
+    start: 'top 70%',
+    end: 'bottom bottom',
+    onUpdate: self => {
+      const p = self.progress * steps;
+      const active = Math.min(steps - 1, Math.floor(p));
+      labels.forEach((label, i) => {
+        label.classList.toggle('is-active', i === active);
+        if (fills[i]) gsap.set(fills[i], { scaleX: gsap.utils.clamp(0, 1, p - i) });
+      });
+      if (reducedMotion) return;
+      cards.forEach((card, i) => {
+        if (i === cards.length - 1) return;
+        const depth = gsap.utils.clamp(0, 1, (p - i - 0.45) * 1.6);
+        card.style.setProperty('--depth', depth.toFixed(3));
+      });
+    },
+  });
+}
+
+
+/* ---------- Security: las capas de cristal se desplazan a distinta velocidad ---------- */
+function initSecurity(): void {
+  if (reducedMotion) return;
+  gsap.utils.toArray<HTMLElement>('.panes i').forEach((pane, i) => {
+    gsap.fromTo(pane,
+      { yPercent: 10 + i * 7 },
+      {
+        yPercent: -6 - i * 5,
+        ease: 'none',
+        scrollTrigger: { trigger: '.security', start: 'top bottom', end: 'bottom top', scrub: true },
+      }
+    );
+  });
+}
+
+
+/* ---------- Testimonials ---------- */
+function initTestimonials(): void {
+  const el = document.querySelector<HTMLElement>('.testi-swiper');
+  const wrapper = el?.querySelector('.swiper-wrapper');
+  if (!el || !wrapper) return;
+
+  // El modo loop necesita más diapositivas de las visibles: se duplican
+  Array.from(wrapper.children).forEach(slide => {
+    const clone = slide.cloneNode(true) as HTMLElement;
+    clone.setAttribute('aria-hidden', 'true');
+    wrapper.appendChild(clone);
+  });
+
+  const swiper = new Swiper(el, {
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    spaceBetween: 32,
+    loop: true,
+    speed: 900,
+    grabCursor: true,
+  });
+
+  document.querySelectorAll<HTMLButtonElement>('.testi-nav__btn').forEach(btn => {
+    btn.addEventListener('click', () => (btn.dataset.dir === 'prev' ? swiper.slidePrev() : swiper.slideNext()));
+  });
+}
+
+
+/* ---------- FAQ: acordeón con altura animada ---------- */
+function initFaq(): void {
+  document.querySelectorAll<HTMLDetailsElement>('.faq-item').forEach(item => {
+    const summary = item.querySelector('summary');
+    const body = item.querySelector<HTMLElement>('.faq-item__body');
+    if (!summary || !body) return;
+
+    summary.addEventListener('click', event => {
+      event.preventDefault();
+
+      if (item.open) {
+        item.classList.remove('is-open');
+        gsap.to(body, {
+          height: 0,
+          duration: reducedMotion ? 0 : 0.45,
+          ease: 'power2.inOut',
+          onComplete: () => {
+            item.open = false;
+            gsap.set(body, { clearProps: 'height' });
+          },
+        });
+      } else {
+        item.open = true;
+        item.classList.add('is-open');
+        gsap.fromTo(body,
+          { height: 0 },
+          { height: 'auto', duration: reducedMotion ? 0 : 0.55, ease: 'power3.out', clearProps: 'height' }
+        );
+      }
+    });
+  });
+}
+
+
+/* ---------- Barras de disponibilidad del panel "Cloud & care" ---------- */
+function initUptimeBars(): void {
+  const container = document.querySelector('.vis-uptime__bars');
+  if (!container) return;
+  for (let i = 0; i < 30; i++) {
+    const bar = document.createElement('i');
+    bar.style.height = `${62 + Math.round(Math.random() * 38)}%`;
+    if (i === 17) bar.className = 'is-dip';
+    container.appendChild(bar);
+  }
 }

@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/quinvora.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work — Quinvora Code</title>
+    <meta name="description" content="Selected custom web software built by Quinvora Code." />
+  </head>
+  <body class="page-projects">
+    <div id="app">
+      <header class="navbar">
+        <a href="/" class="logo" aria-label="Quinvora Code — Home">QUINVORA CODE</a>
+
+        <nav class="desktop-nav" aria-label="Main">
+          <a href="/#services">Services</a>
+          <a href="/projects.html" aria-current="page">Work</a>
+          <a href="/#why">About</a>
+          <a href="/#faq">FAQ</a>
+        </nav>
+
+        <div class="header-buttons">
+          <a href="#contact" class="btn-glow btn-glow--sm">Contact Us</a>
+          <button class="menu-toggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="mobile-nav-overlay">
+        <nav>
+          <a href="/">Home</a>
+          <a href="/#services">Services</a>
+          <a href="/projects.html">Work</a>
+          <a href="/#faq">FAQ</a>
+          <a href="#contact" class="mobile-contact">Contact Us</a>
+        </nav>
+      </div>
+
+      <!-- ==========================================================
+           SELECTED WORK
+           Cada proyecto se muestra dentro de una ventana de navegador y
+           la captura se desplaza sola mientras haces scroll.
+
+           Cómo preparar tus capturas:
+             · Ancho: 1440 px (o 2880 px para pantallas retina)
+             · Alto:  página completa, idealmente 2400 – 4000 px.
+                      Mínimo 900 px (1440 × 900, proporción 16:10);
+                      si es más corta no habrá desplazamiento interno.
+             · Formato: WebP o AVIF, idealmente < 600 KB.
+           Guárdalas en /public/projects/ y cambia el src de cada <img>.
+           ========================================================== -->
+      <section class="work work--page" id="work">
+        <div class="work__inner">
+          <header class="work__head">
+            <div class="work__eyebrow"><i></i>Our Work</div>
+
+            <div class="work__headline">
+              <h2 class="work__title">Selected Work</h2>
+
+              <div class="work__aside">
+                <p class="work__lede">Custom web software, built from scratch for each client — platforms, portals and internal tools that run real businesses.</p>
+                <div class="work__meta">
+                  <span class="work__count"><b data-count>00</b><em>Projects</em></span>
+                  <a href="#contact" class="work__all">Start yours<i></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="work__rule"></div>
+          </header>
+        </div>
+
+        <div class="work__stage">
+          <article class="project" style="--accent: #a78bfa">
+            <div class="project__card">
+              <div class="project__info">
+                <div class="project__top project__reveal">
+                  <span class="project__num">01<small>/06</small></span>
+                  <span class="project__type"><i></i>Streaming platform</span>
+                </div>
+                <div class="project__main">
+                  <h3 class="project__name project__reveal">Lavely Music</h3>
+                  <p class="project__desc project__reveal">A music streaming web app with curated radio, live sessions and a studio where artists publish and track their releases.</p>
+                  <ul class="project__tags project__reveal"><li>Next.js</li><li>Node.js</li><li>PostgreSQL</li></ul>
+                </div>
+                <div class="project__bottom project__reveal">
+                  <dl class="project__facts">
+                    <div><dt>Year</dt><dd>2024</dd></div>
+                    <div><dt>Scope</dt><dd>Design · Build · Hosting</dd></div>
+                  </dl>
+                  <a class="project__cta" href="#">View project<span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.8M11.5 4.5v5.7" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+                </div>
+              </div>
+
+              <a class="project__browser" href="#" aria-label="Open Lavely Music">
+                <div class="project__chrome">
+                  <span class="project__dots"><i></i><i></i><i></i></span>
+                  <span class="project__url"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 7V5.5a3 3 0 0 1 6 0V7M4.5 7h7a1 1 0 0 1 1 1v4.5a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>lavelymusic.com</span>
+                </div>
+                <div class="project__viewport">
+                  <img class="project__shot" src="/projects/lavely-music.svg" alt="Lavely Music — full page" decoding="async">
+                  <span class="project__scrollbar" aria-hidden="true"><i></i></span>
+                </div>
+              </a>
+
+              <span class="project__shade" aria-hidden="true"></span>
+            </div>
+          </article>
+          <article class="project" style="--accent: #2563eb">
+            <div class="project__card">
+              <div class="project__info">
+                <div class="project__top project__reveal">
+                  <span class="project__num">02<small>/06</small></span>
+                  <span class="project__type"><i></i>Corporate ERP portal</span>
+                </div>
+                <div class="project__main">
+                  <h3 class="project__name project__reveal">Mega Pertama Unggul</h3>
+                  <p class="project__desc project__reveal">One web portal connecting purchasing, inventory and finance — spreadsheets replaced by approval flows and live reporting.</p>
+                  <ul class="project__tags project__reveal"><li>React</li><li>NestJS</li><li>SQL Server</li></ul>
+                </div>
+                <div class="project__bottom project__reveal">
+                  <dl class="project__facts">
+                    <div><dt>Year</dt><dd>2024</dd></div>
+                    <div><dt>Scope</dt><dd>Build · Integrations</dd></div>
+                  </dl>
+                  <a class="project__cta" href="#">View project<span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.8M11.5 4.5v5.7" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+                </div>
+              </div>
+
+              <a class="project__browser" href="#" aria-label="Open Mega Pertama Unggul">
+                <div class="project__chrome">
+                  <span class="project__dots"><i></i><i></i><i></i></span>
+                  <span class="project__url"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 7V5.5a3 3 0 0 1 6 0V7M4.5 7h7a1 1 0 0 1 1 1v4.5a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>portal.megapertama.co.id</span>
+                </div>
+                <div class="project__viewport">
+                  <img class="project__shot" src="/projects/mega-pertama.svg" alt="Mega Pertama Unggul — full page" decoding="async">
+                  <span class="project__scrollbar" aria-hidden="true"><i></i></span>
+                </div>
+              </a>
+
+              <span class="project__shade" aria-hidden="true"></span>
+            </div>
+          </article>
+          <article class="project" style="--accent: #f97316">
+            <div class="project__card">
+              <div class="project__info">
+                <div class="project__top project__reveal">
+                  <span class="project__num">03<small>/06</small></span>
+                  <span class="project__type"><i></i>Workflow SaaS</span>
+                </div>
+                <div class="project__main">
+                  <h3 class="project__name project__reveal">Formindo</h3>
+                  <p class="project__desc project__reveal">A no-code form builder that turns paperwork into approval workflows and syncs data with the client’s existing systems.</p>
+                  <ul class="project__tags project__reveal"><li>Vue</li><li>Laravel</li><li>MySQL</li></ul>
+                </div>
+                <div class="project__bottom project__reveal">
+                  <dl class="project__facts">
+                    <div><dt>Year</dt><dd>2023</dd></div>
+                    <div><dt>Scope</dt><dd>Product · Design · Build</dd></div>
+                  </dl>
+                  <a class="project__cta" href="#">View project<span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.8M11.5 4.5v5.7" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+                </div>
+              </div>
+
+              <a class="project__browser" href="#" aria-label="Open Formindo">
+                <div class="project__chrome">
+                  <span class="project__dots"><i></i><i></i><i></i></span>
+                  <span class="project__url"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 7V5.5a3 3 0 0 1 6 0V7M4.5 7h7a1 1 0 0 1 1 1v4.5a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>formindo.app</span>
+                </div>
+                <div class="project__viewport">
+                  <img class="project__shot" src="/projects/formindo.svg" alt="Formindo — full page" decoding="async">
+                  <span class="project__scrollbar" aria-hidden="true"><i></i></span>
+                </div>
+              </a>
+
+              <span class="project__shade" aria-hidden="true"></span>
+            </div>
+          </article>
+          <article class="project" style="--accent: #14b8a6">
+            <div class="project__card">
+              <div class="project__info">
+                <div class="project__top project__reveal">
+                  <span class="project__num">04<small>/06</small></span>
+                  <span class="project__type"><i></i>Shipyard management</span>
+                </div>
+                <div class="project__main">
+                  <h3 class="project__name project__reveal">Sumber Anugerah</h3>
+                  <p class="project__desc project__reveal">Dry-dock planning, work orders and cost tracking for a shipyard, so every vessel stays on schedule.</p>
+                  <ul class="project__tags project__reveal"><li>React</li><li>Django</li><li>PostgreSQL</li></ul>
+                </div>
+                <div class="project__bottom project__reveal">
+                  <dl class="project__facts">
+                    <div><dt>Year</dt><dd>2023</dd></div>
+                    <div><dt>Scope</dt><dd>Build · Support</dd></div>
+                  </dl>
+                  <a class="project__cta" href="#">View project<span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.8M11.5 4.5v5.7" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+                </div>
+              </div>
+
+              <a class="project__browser" href="#" aria-label="Open Sumber Anugerah">
+                <div class="project__chrome">
+                  <span class="project__dots"><i></i><i></i><i></i></span>
+                  <span class="project__url"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 7V5.5a3 3 0 0 1 6 0V7M4.5 7h7a1 1 0 0 1 1 1v4.5a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>sas-shipyard.com</span>
+                </div>
+                <div class="project__viewport">
+                  <img class="project__shot" src="/projects/sumber-anugerah.svg" alt="Sumber Anugerah — full page" decoding="async">
+                  <span class="project__scrollbar" aria-hidden="true"><i></i></span>
+                </div>
+              </a>
+
+              <span class="project__shade" aria-hidden="true"></span>
+            </div>
+          </article>
+          <article class="project" style="--accent: #16a34a">
+            <div class="project__card">
+              <div class="project__info">
+                <div class="project__top project__reveal">
+                  <span class="project__num">05<small>/06</small></span>
+                  <span class="project__type"><i></i>E-commerce platform</span>
+                </div>
+                <div class="project__main">
+                  <h3 class="project__name project__reveal">Proyecto Alpha</h3>
+                  <p class="project__desc project__reveal">A headless storefront with a custom checkout, live inventory and a loyalty program — built for speed.</p>
+                  <ul class="project__tags project__reveal"><li>Astro</li><li>Stripe</li><li>Supabase</li></ul>
+                </div>
+                <div class="project__bottom project__reveal">
+                  <dl class="project__facts">
+                    <div><dt>Year</dt><dd>2025</dd></div>
+                    <div><dt>Scope</dt><dd>Design · Build</dd></div>
+                  </dl>
+                  <a class="project__cta" href="#">View project<span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.8M11.5 4.5v5.7" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+                </div>
+              </div>
+
+              <a class="project__browser" href="#" aria-label="Open Proyecto Alpha">
+                <div class="project__chrome">
+                  <span class="project__dots"><i></i><i></i><i></i></span>
+                  <span class="project__url"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 7V5.5a3 3 0 0 1 6 0V7M4.5 7h7a1 1 0 0 1 1 1v4.5a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>alpha.store</span>
+                </div>
+                <div class="project__viewport">
+                  <img class="project__shot" src="/projects/proyecto-alpha.svg" alt="Proyecto Alpha — full page" decoding="async">
+                  <span class="project__scrollbar" aria-hidden="true"><i></i></span>
+                </div>
+              </a>
+
+              <span class="project__shade" aria-hidden="true"></span>
+            </div>
+          </article>
+          <article class="project" style="--accent: #eab308">
+            <div class="project__card">
+              <div class="project__info">
+                <div class="project__top project__reveal">
+                  <span class="project__num">06<small>/06</small></span>
+                  <span class="project__type"><i></i>Inventory system</span>
+                </div>
+                <div class="project__main">
+                  <h3 class="project__name project__reveal">Sistema de Inventario</h3>
+                  <p class="project__desc project__reveal">Real-time inventory across warehouses, with barcode scanning and purchase forecasting.</p>
+                  <ul class="project__tags project__reveal"><li>React</li><li>Express</li><li>MongoDB</li></ul>
+                </div>
+                <div class="project__bottom project__reveal">
+                  <dl class="project__facts">
+                    <div><dt>Year</dt><dd>2025</dd></div>
+                    <div><dt>Scope</dt><dd>Build · Hosting</dd></div>
+                  </dl>
+                  <a class="project__cta" href="#">View project<span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.8M11.5 4.5v5.7" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+                </div>
+              </div>
+
+              <a class="project__browser" href="#" aria-label="Open Sistema de Inventario">
+                <div class="project__chrome">
+                  <span class="project__dots"><i></i><i></i><i></i></span>
+                  <span class="project__url"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 7V5.5a3 3 0 0 1 6 0V7M4.5 7h7a1 1 0 0 1 1 1v4.5a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>stockly.app</span>
+                </div>
+                <div class="project__viewport">
+                  <img class="project__shot" src="/projects/sistema-inventario.svg" alt="Sistema de Inventario — full page" decoding="async">
+                  <span class="project__scrollbar" aria-hidden="true"><i></i></span>
+                </div>
+              </a>
+
+              <span class="project__shade" aria-hidden="true"></span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ==========================================================
+           FOOTER
+           Cambia los href="#" por tu email / redes reales.
+           ========================================================== -->
+      <footer class="site-foot" id="contact">
+        <div class="site-foot__cta">
+          <h2 class="site-foot__title">Step into Quinvora Code —<br>software built around you</h2>
+          <p>Tell us what your business needs. We’ll design, build and run it with you.</p>
+          <a href="#" class="btn-glow">Start a project</a>
+        </div>
+
+        <div class="site-foot__mark" aria-hidden="true">
+          <div class="site-foot__glow"></div>
+          <div class="site-foot__word">
+            <span class="ghost">CODE</span><span class="main">QUINVORACODE</span><span class="ghost">QUINVORA</span>
+          </div>
+        </div>
+
+        <div class="site-foot__cols">
+          <div>
+            <h4>Navigation</h4>
+            <a href="/">Home</a>
+            <a href="/projects.html">Work</a>
+            <a href="/#services">Services</a>
+            <a href="/#why">About</a>
+          </div>
+          <div>
+            <h4>Services</h4>
+            <a href="/#svc-platforms">Web platforms</a>
+            <a href="/#svc-integrations">Integrations</a>
+            <a href="/#svc-cloud">Cloud &amp; care</a>
+            <a href="/#process">How we work</a>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <a href="/#faq">FAQ</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms and conditions</a>
+            <button type="button" data-cookie-settings>Cookie settings</button>
+          </div>
+          <div>
+            <h4>Social</h4>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">X / Twitter</a>
+            <a href="#">GitHub</a>
+          </div>
+        </div>
+
+        <div class="site-foot__bottom">
+          <span>All rights reserved © 2026 Quinvora Code</span>
+          <span>Designed &amp; built by Quinvora Code</span>
+        </div>
+      </footer>
+    </div>
+
+    <div class="cookie" role="dialog" aria-modal="false" aria-labelledby="cookie-title" aria-describedby="cookie-text" hidden>
+      <div class="cookie__body">
+        <p class="cookie__title" id="cookie-title">We value your privacy</p>
+        <p class="cookie__text" id="cookie-text">We use essential cookies to make this site work and, only if you allow it, analytics cookies to understand how it’s used.</p>
+      </div>
+      <div class="cookie__actions">
+        <button type="button" class="cookie__btn cookie__btn--ghost" data-consent="rejected">Reject</button>
+        <button type="button" class="cookie__btn cookie__btn--solid" data-consent="accepted">Accept</button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/projects-page.ts"></script>
+  </body>
+</html>

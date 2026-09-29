@@ -4,27 +4,77 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/quinvora.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quinvora Code</title>
+    <title>Quinvora Code — Custom web software</title>
+    <meta name="description" content="Quinvora Code designs, builds and runs custom web software: platforms, portals and internal tools built around your business." />
   </head>
   <body>
-    
+    <!-- Iconos (se usan con <svg class="ico"><use href="#i-..."/></svg>) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <defs>
+        <symbol id="i-spark" viewBox="0 0 24 24"><path d="M11 3.5l1.8 5.2 5.2 1.8-5.2 1.8L11 17.5l-1.8-5.2L4 10.5l5.2-1.8zM18.5 3v3.5M16.75 4.75h3.5"/></symbol>
+        <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3.5l8.5 4.75L12 13 3.5 8.25zM3.5 12.5L12 17.25l8.5-4.75M3.5 16.5L12 21.25l8.5-4.75"/></symbol>
+        <symbol id="i-grid" viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></symbol>
+        <symbol id="i-steps" viewBox="0 0 24 24"><path d="M4 20v-6h4v6M10 20V9h4v11M16 20V4h4v16M3 20h18"/></symbol>
+        <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6zM8.5 12l2.5 2.5 4.5-5"/></symbol>
+        <symbol id="i-quote" viewBox="0 0 24 24"><path d="M9.5 6.5C6.5 7.5 4.5 10 4.5 13.5V18h5v-5h-2.5c0-2 1-3.5 3-4.2zM19.5 6.5c-3 1-5 3.5-5 7V18h5v-5H17c0-2 1-3.5 3-4.2z"/></symbol>
+        <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3.5 12V4.5a1 1 0 0 1 1-1H12l8.5 8.5-8.5 8.5zM8 8h.01"/></symbol>
+        <symbol id="i-info" viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 11v5.5M12 7.5h.01"/></symbol>
+        <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 3v5M15 3v5M6.5 8h11v3a5.5 5.5 0 0 1-11 0zM12 16.5V21"/></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+        <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+        <symbol id="i-left" viewBox="0 0 24 24"><path d="M14.5 5.5L8 12l6.5 6.5"/></symbol>
+        <symbol id="i-right" viewBox="0 0 24 24"><path d="M9.5 5.5L16 12l-6.5 6.5"/></symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8.5M17 7v8.5"/></symbol>
+        <symbol id="i-window" viewBox="0 0 24 24"><path d="M3.5 5.5a1.5 1.5 0 0 1 1.5-1.5h14a1.5 1.5 0 0 1 1.5 1.5v13a1.5 1.5 0 0 1-1.5 1.5H5a1.5 1.5 0 0 1-1.5-1.5zM3.5 9h17M6.5 6.5h.01M9 6.5h.01"/></symbol>
+        <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+        <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 18.5h10a4 4 0 0 0 .6-7.95A6 6 0 0 0 6.1 9.8 4.35 4.35 0 0 0 7 18.5z"/></symbol>
+        <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2.2l2.3 11h10.2L20 7.5H6.3M9.5 19.5h.01M17 19.5h.01"/></symbol>
+        <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5zM5 19.5A1.5 1.5 0 0 0 6.5 21H19"/></symbol>
+        <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.2 4.2 0 0 1 12 7.2a4.2 4.2 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20zM7.5 12h2.2l1.4-2.4 2 4.8 1.4-2.4h2"/></symbol>
+        <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 4v16h16M8 15.5l3.5-4.5 3 3L20 7.5"/></symbol>
+        <symbol id="i-lock" viewBox="0 0 24 24"><path d="M6.5 11h11a1 1 0 0 1 1 1v7.5a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V12a1 1 0 0 1 1-1zM8.5 11V8a3.5 3.5 0 0 1 7 0v3M12 15v2"/></symbol>
+        <symbol id="i-key" viewBox="0 0 24 24"><path d="M8.5 19a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9zM11.7 11.3L20 3M16.5 6.5l2.5 2.5M14.5 8.5l2 2"/></symbol>
+        <symbol id="i-database" viewBox="0 0 24 24"><path d="M12 8c4.1 0 7.5-1.3 7.5-3S16.1 2 12 2 4.5 3.3 4.5 5s3.4 3 7.5 3zM4.5 5v14c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3V5M4.5 12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3"/></symbol>
+        <symbol id="i-card" viewBox="0 0 24 24"><path d="M4.5 5.5h15a1.5 1.5 0 0 1 1.5 1.5v10a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17V7a1.5 1.5 0 0 1 1.5-1.5zM3 10h18M7 15h4"/></symbol>
+        <symbol id="i-message" viewBox="0 0 24 24"><path d="M4 5.5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1V16a1 1 0 0 1-1 1H9.5L4 20.5zM8.5 9.5h7M8.5 12.5h4.5"/></symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4.5 5.5h15A1.5 1.5 0 0 1 21 7v10a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17V7a1.5 1.5 0 0 1 1.5-1.5zM3.5 7l8.5 6 8.5-6"/></symbol>
+        <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3L5 13.5h6.5L10.5 21 19 10.5h-6.5z"/></symbol>
+        <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></symbol>
+        <symbol id="i-users" viewBox="0 0 24 24"><path d="M9 11.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM2.5 20a6.5 6.5 0 0 1 13 0M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.2a6.5 6.5 0 0 1 3.5 5.8"/></symbol>
+        <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M12 15l-3-3c1.2-4.5 4.5-8 10.5-8.5-.5 6-4 9.3-7.5 11.5zM9 12l-4 .5 2.5-4 4-.5M12 15l-.5 4 4-2.5.5-4M6.5 17.5C5.5 18.5 5 21 5 21s2.5-.5 3.5-1.5"/></symbol>
+        <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M4 20l4.5-1L19 8.5 15.5 5 5 15.5zM13.5 7l3.5 3.5"/></symbol>
+        <symbol id="i-server" viewBox="0 0 24 24"><path d="M5.5 4h13a1.5 1.5 0 0 1 1.5 1.5v4a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 9.5v-4A1.5 1.5 0 0 1 5.5 4zM5.5 13h13a1.5 1.5 0 0 1 1.5 1.5v4a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-4A1.5 1.5 0 0 1 5.5 13zM8 7.5h.01M8 16.5h.01"/></symbol>
+        <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4 17a8 8 0 1 1 16 0M12 13.5l4-4M12 17h.01"/></symbol>
+        <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M19.5 11A7.5 7.5 0 0 0 5.6 7.5M4.5 13a7.5 7.5 0 0 0 13.9 3.5M5 3.5v4h4M19 20.5v-4h-4"/></symbol>
+      </defs>
+    </svg>
+
     <div class="ambient-bg">
-      <div id="stars-container"></div> 
+      <!-- Copias de las luces del fondo que suben y bajan de intensidad -->
+      <div class="aurora-pulse" aria-hidden="true">
+        <i style="--x: 22%; --w: 13%; --t: 5.2s; --d: 0s"></i>
+        <i style="--x: 36%; --w: 11%; --t: 6.4s; --d: -2.1s"></i>
+        <i style="--x: 50%; --w: 12%; --t: 4.8s; --d: -3.4s"></i>
+        <i style="--x: 64%; --w: 11%; --t: 6s; --d: -1.2s"></i>
+        <i style="--x: 78%; --w: 13%; --t: 5.6s; --d: -4.3s"></i>
+      </div>
+      <div id="stars-container"></div>
       <div class="bg-overlay"></div>
     </div>
-    
+
     <div id="app">
       <header class="navbar">
-        <div class="logo">QUINVORA CODE</div>
-        
-        <nav class="desktop-nav">
-          <a href="#">Home</a>
-          <a href="#">Work</a>
-          <a href="#">About</a>
+        <a href="/" class="logo" aria-label="Quinvora Code — Home">QUINVORA CODE</a>
+
+        <nav class="desktop-nav" aria-label="Main">
+          <a href="/#services">Services</a>
+          <a href="/projects.html">Work</a>
+          <a href="/#why">About</a>
+          <a href="/#faq">FAQ</a>
         </nav>
-        
+
         <div class="header-buttons">
-          <button class="btn-contact">Contact Us</button>
+          <a href="#contact" class="btn-glow btn-glow--sm">Contact Us</a>
           <button class="menu-toggle" aria-label="Abrir menú">
             <span></span>
             <span></span>
@@ -35,10 +85,11 @@
 
       <div class="mobile-nav-overlay">
         <nav>
-          <a href="#">Home</a>
-          <a href="#">Work</a>
-          <a href="#">About</a>
-          <a href="#" class="mobile-contact">Contact Us</a>
+          <a href="/">Home</a>
+          <a href="/#services">Services</a>
+          <a href="/projects.html">Work</a>
+          <a href="/#faq">FAQ</a>
+          <a href="#contact" class="mobile-contact">Contact Us</a>
         </nav>
       </div>
 
@@ -46,9 +97,10 @@
         <div class="sticky-container">
           
           <div class="hero-text">
+            <span class="hero-badge"><i></i>Custom software · Built for the web</span>
             <h1 class="linear-wipe-active">Beautiful Experiences<br>— Built to Perform</h1>
             <p>Mathias Benites Lopez</p>
-            <button class="btn-contact mobile-hero-btn">Contact Us</button>
+            <a href="#contact" class="btn-glow hero-cta">Start a project</a>
           </div>
 
           <div class="expandable-rect">
@@ -62,8 +114,17 @@
                   </div>
                 </div>
                 
-                <div class="swiper-slide"><div class="slide-content">Proyecto 2</div></div>
-                <div class="swiper-slide"><div class="slide-content">Proyecto 3</div></div>
+                <div class="swiper-slide">
+                  <div class="slide-content">
+                    <img src="/slides/brand-identity.svg" alt="Brand identity system" class="dashboard-img dashboard-img--top">
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="slide-content">
+                    <img src="/slides/quality-system.svg" alt="Quality system dashboard" class="dashboard-img dashboard-img--top">
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -71,24 +132,35 @@
 
           <div class="carousel-nav">
             <div class="nav-item active" data-index="0">
-              <h3>Mathias Benites Lopez</h3>
-              <span>Owner & Software Engineer</span>
-              <div class="progress-bar"></div>
+              <h3>Tailor-Made Software</h3>
+              <span>Custom Web Platforms</span>
+              <div class="progress-bar"><i class="progress-fill"></i></div>
             </div>
             <div class="nav-item" data-index="1">
               <h3>Intelligent Simplicity</h3>
               <span>BRAND IDENTITY</span>
-              <div class="progress-bar"></div>
+              <div class="progress-bar"><i class="progress-fill"></i></div>
             </div>
             <div class="nav-item" data-index="2">
               <h3>Fluid Efficiency</h3>
               <span>QUALITY SYSTEM</span>
-              <div class="progress-bar"></div>
+              <div class="progress-bar"><i class="progress-fill"></i></div>
             </div>
           </div>
 
         </div>
       </section>
+
+      <section class="stack-strip" aria-label="Technologies">
+        <p class="stack-strip__label">Built with modern, proven technology</p>
+        <div class="stack-strip__marquee">
+          <div class="stack-strip__track">
+            <div class="stack-strip__group"><span>React</span><span>Next.js</span><span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span><span>Vue</span><span>Laravel</span><span>Python</span><span>AWS</span><span>Docker</span><span>Stripe</span><span>Supabase</span></div>
+            <div class="stack-strip__group" aria-hidden="true"><span>React</span><span>Next.js</span><span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span><span>Vue</span><span>Laravel</span><span>Python</span><span>AWS</span><span>Docker</span><span>Stripe</span><span>Supabase</span></div>
+          </div>
+        </div>
+      </section>
+
       <section class="features-section">
         <div class="features-content">
           
@@ -117,203 +189,678 @@
 
         </div>
       </section>
-      
+
+
       <!-- ==========================================================
-           SELECTED WORK
-           Sustituye cada <img src="..."> por tus imágenes.
-           Tamaños recomendados:
-             · .work-card--wide  →  1800 x 900 px
-             · resto de tarjetas →  1200 x 1500 px
-           El atributo data-cat controla el filtro (web / brand / system).
+           WHY QUINVORA
            ========================================================== -->
-      <section class="work" id="work">
-        <div class="work__rules" aria-hidden="true">
-          <span></span><span></span><span></span><span></span><span></span>
-        </div>
-
-        <div class="work__inner">
-          <header class="work__head">
-            <div class="work__eyebrow"><i></i>Our Work</div>
-
-            <div class="work__headline">
-              <h2 class="work__title">Selected Work</h2>
-
-              <div class="work__aside">
-                <p class="work__lede">A short selection of the products we design, build and maintain — from brand systems to software running in production.</p>
-                <div class="work__meta">
-                  <span class="work__count"><b data-count>00</b><em>Projects</em></span>
-                  <a href="#" class="work__all">See all<i></i></a>
-                </div>
-              </div>
+      <section class="sec why" id="why">
+        <div class="sec__inner">
+          <header class="sec-head">
+            <div class="sec-eyebrow"><svg class="ico"><use href="#i-spark"/></svg>Why Quinvora</div>
+            <div class="sec-head__row">
+              <h2 class="sec-title">What sets Quinvora apart</h2>
+              <p class="sec-lede">Software designed around your business — not the other way around.</p>
             </div>
-
-            <nav class="work__filters" aria-label="Filtrar proyectos">
-              <button type="button" class="work__filter is-active" data-filter="all">All</button>
-              <button type="button" class="work__filter" data-filter="web">Web</button>
-              <button type="button" class="work__filter" data-filter="brand">Brand</button>
-              <button type="button" class="work__filter" data-filter="system">Systems</button>
-            </nav>
-
-            <div class="work__rule"></div>
           </header>
 
-          <div class="work__grid">
-
-            <article class="work-card work-card--wide" data-cat="brand web">
-              <a class="work-card__link" href="#">
-                <div class="work-card__frame">
-                  <div class="work-card__media">
-                    <img class="work-card__img" src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1600&auto=format&fit=crop" alt="Lavely Music" loading="lazy">
-                  </div>
-                  <span class="work-card__sheen"></span>
-                </div>
-                <div class="work-card__bar"></div>
-                <div class="work-card__row">
-                  <div class="work-card__id">
-                    <span class="work-card__num">01</span>
-                    <h3 class="work-card__name">Lavely Music</h3>
-                  </div>
-                  <div class="work-card__tail">
-                    <span class="work-card__tags">Brand identity · Web</span>
-                    <span class="work-card__year">2024</span>
-                    <span class="work-card__go" aria-hidden="true">
-                      <svg viewBox="0 0 16 16"><path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.8M11.5 4.5v5.7" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
+          <div class="bento">
+            <article class="bento__card bento__card--wide" data-reveal>
+              <div class="bento__visual vis-circuit" aria-hidden="true">
+                <svg viewBox="0 0 420 260" fill="none">
+                  <g class="vis-circuit__traces" stroke="rgba(232,228,219,0.34)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M210 130 H170 L150 110 H96"/>
+                    <path d="M210 130 H170 L150 150 H110 L96 164"/>
+                    <path d="M210 118 V84 L190 64 H132"/>
+                    <path d="M222 118 V70 L240 52 H300"/>
+                    <path d="M234 130 H270 L290 110 H330"/>
+                    <path d="M234 142 H262 L282 162 H316 L330 176"/>
+                    <path d="M216 154 V190 L196 210 H150"/>
+                    <path d="M228 154 V198 L246 216 H292"/>
+                  </g>
+                  <g class="vis-circuit__flow" stroke="#fdfaf3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M210 130 H170 L150 110 H96"/>
+                    <path d="M222 118 V70 L240 52 H300"/>
+                    <path d="M234 142 H262 L282 162 H316 L330 176"/>
+                    <path d="M216 154 V190 L196 210 H150"/>
+                  </g>
+                  <rect x="198" y="112" width="48" height="48" rx="12" fill="rgba(232,228,219,0.08)" stroke="rgba(232,228,219,0.55)" stroke-width="1.4"/>
+                  <path d="M214 136 l6 6 10 -12" stroke="#fdfaf3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <g class="vis-circuit__nodes" fill="#0d0d0d" stroke="rgba(232,228,219,0.8)" stroke-width="1.6">
+                    <circle cx="96" cy="110" r="5"/><circle cx="96" cy="164" r="5"/><circle cx="132" cy="64" r="5"/>
+                    <circle cx="300" cy="52" r="5"/><circle cx="330" cy="110" r="5"/><circle cx="330" cy="176" r="5"/>
+                    <circle cx="150" cy="210" r="5"/><circle cx="292" cy="216" r="5"/>
+                  </g>
+                  <g class="vis-circuit__glow" fill="#fffaf0">
+                    <circle cx="96" cy="110" r="5"/><circle cx="300" cy="52" r="5"/><circle cx="330" cy="176" r="5"/><circle cx="150" cy="210" r="5"/>
+                  </g>
+                </svg>
+              </div>
+              <div class="bento__caption">
+                <h3>Tailor-made</h3>
+                <p>Every feature is built for your process, your team and your customers. No templates, no workarounds.</p>
+              </div>
             </article>
 
-            <article class="work-card" data-cat="web">
-              <a class="work-card__link" href="#">
-                <div class="work-card__frame">
-                  <div class="work-card__media">
-                    <img class="work-card__img" src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?q=80&w=1200&auto=format&fit=crop" alt="Mega Pertama Unggul" loading="lazy">
-                  </div>
-                  <span class="work-card__sheen"></span>
+            <article class="bento__card bento__card--wide" data-reveal>
+              <div class="bento__visual vis-speed" aria-hidden="true">
+                <div class="vis-speed__core"></div>
+                <div class="vis-speed__rings"><i></i><i></i><i></i></div>
+                <div class="vis-speed__streaks">
+                  <i style="--a:-24deg;--d:0s"></i><i style="--a:12deg;--d:.35s"></i><i style="--a:38deg;--d:.8s"></i>
+                  <i style="--a:160deg;--d:.2s"></i><i style="--a:196deg;--d:.6s"></i><i style="--a:222deg;--d:1.1s"></i>
+                  <i style="--a:88deg;--d:1.4s"></i><i style="--a:272deg;--d:.95s"></i><i style="--a:-60deg;--d:1.7s"></i>
                 </div>
-                <div class="work-card__bar"></div>
-                <div class="work-card__row">
-                  <div class="work-card__id">
-                    <span class="work-card__num">02</span>
-                    <h3 class="work-card__name">Mega Pertama Unggul</h3>
-                  </div>
-                  <div class="work-card__tail">
-                    <span class="work-card__tags">Corporate platform</span>
-                    <span class="work-card__year">2024</span>
-                    <span class="work-card__go" aria-hidden="true">
-                      <svg viewBox="0 0 16 16"><path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.8M11.5 4.5v5.7" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
+              </div>
+              <div class="bento__caption">
+                <h3>Performance</h3>
+                <p>Fast by default: clean code, modern infrastructure and pages that load in under a second.</p>
+              </div>
             </article>
 
-            <article class="work-card" data-cat="system">
-              <a class="work-card__link" href="#">
-                <div class="work-card__frame">
-                  <div class="work-card__media">
-                    <img class="work-card__img" src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?q=80&w=1200&auto=format&fit=crop" alt="Formindo" loading="lazy">
-                  </div>
-                  <span class="work-card__sheen"></span>
-                </div>
-                <div class="work-card__bar"></div>
-                <div class="work-card__row">
-                  <div class="work-card__id">
-                    <span class="work-card__num">03</span>
-                    <h3 class="work-card__name">Formindo</h3>
-                  </div>
-                  <div class="work-card__tail">
-                    <span class="work-card__tags">Design system</span>
-                    <span class="work-card__year">2023</span>
-                    <span class="work-card__go" aria-hidden="true">
-                      <svg viewBox="0 0 16 16"><path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.8M11.5 4.5v5.7" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
+            <article class="bento__card" data-reveal>
+              <div class="bento__visual vis-sliders" aria-hidden="true">
+                <span style="--h:72%;--d:5.5s"><i></i><b></b></span>
+                <span style="--h:38%;--d:7s"><i></i><b></b></span>
+                <span style="--h:86%;--d:6.2s"><i></i><b></b></span>
+              </div>
+              <div class="bento__caption">
+                <h3>Control</h3>
+                <p>You own the code, the data and the roadmap — with full visibility at every step.</p>
+              </div>
             </article>
 
-            <article class="work-card" data-cat="brand">
-              <a class="work-card__link" href="#">
-                <div class="work-card__frame">
-                  <div class="work-card__media">
-                    <img class="work-card__img" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop" alt="Sumber Anugerah Shipyard" loading="lazy">
-                  </div>
-                  <span class="work-card__sheen"></span>
+            <article class="bento__card" data-reveal>
+              <div class="bento__visual vis-tiles" aria-hidden="true">
+                <div class="vis-tiles__row">
+                  <span><svg class="ico"><use href="#i-card"/></svg></span><span><svg class="ico"><use href="#i-mail"/></svg></span>
+                  <span><svg class="ico"><use href="#i-database"/></svg></span><span><svg class="ico"><use href="#i-message"/></svg></span>
+                  <span><svg class="ico"><use href="#i-chart"/></svg></span><span><svg class="ico"><use href="#i-cloud"/></svg></span>
+                  <span><svg class="ico"><use href="#i-card"/></svg></span><span><svg class="ico"><use href="#i-mail"/></svg></span>
+                  <span><svg class="ico"><use href="#i-database"/></svg></span><span><svg class="ico"><use href="#i-message"/></svg></span>
+                  <span><svg class="ico"><use href="#i-chart"/></svg></span><span><svg class="ico"><use href="#i-cloud"/></svg></span>
                 </div>
-                <div class="work-card__bar"></div>
-                <div class="work-card__row">
-                  <div class="work-card__id">
-                    <span class="work-card__num">04</span>
-                    <h3 class="work-card__name">Sumber Anugerah</h3>
-                  </div>
-                  <div class="work-card__tail">
-                    <span class="work-card__tags">Brand identity</span>
-                    <span class="work-card__year">2023</span>
-                    <span class="work-card__go" aria-hidden="true">
-                      <svg viewBox="0 0 16 16"><path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.8M11.5 4.5v5.7" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </span>
-                  </div>
+                <div class="vis-tiles__row vis-tiles__row--rev">
+                  <span><svg class="ico"><use href="#i-code"/></svg></span><span><svg class="ico"><use href="#i-lock"/></svg></span>
+                  <span><svg class="ico"><use href="#i-users"/></svg></span><span><svg class="ico"><use href="#i-bolt"/></svg></span>
+                  <span><svg class="ico"><use href="#i-server"/></svg></span><span><svg class="ico"><use href="#i-link"/></svg></span>
+                  <span><svg class="ico"><use href="#i-code"/></svg></span><span><svg class="ico"><use href="#i-lock"/></svg></span>
+                  <span><svg class="ico"><use href="#i-users"/></svg></span><span><svg class="ico"><use href="#i-bolt"/></svg></span>
+                  <span><svg class="ico"><use href="#i-server"/></svg></span><span><svg class="ico"><use href="#i-link"/></svg></span>
                 </div>
-              </a>
+              </div>
+              <div class="bento__caption">
+                <h3>Flexibility</h3>
+                <p>We connect with the tools you already use and grow the platform as you scale.</p>
+              </div>
             </article>
 
-            <article class="work-card" data-cat="web">
-              <a class="work-card__link" href="#">
-                <div class="work-card__frame">
-                  <div class="work-card__media">
-                    <img class="work-card__img" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="Proyecto Alpha" loading="lazy">
-                  </div>
-                  <span class="work-card__sheen"></span>
-                </div>
-                <div class="work-card__bar"></div>
-                <div class="work-card__row">
-                  <div class="work-card__id">
-                    <span class="work-card__num">05</span>
-                    <h3 class="work-card__name">Proyecto Alpha</h3>
-                  </div>
-                  <div class="work-card__tail">
-                    <span class="work-card__tags">Web application</span>
-                    <span class="work-card__year">2025</span>
-                    <span class="work-card__go" aria-hidden="true">
-                      <svg viewBox="0 0 16 16"><path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.8M11.5 4.5v5.7" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
+            <article class="bento__card bento__card--cta" data-reveal>
+              <div>
+                <h3>Ready to get started?</h3>
+                <p>Let’s build the software your business actually needs.</p>
+              </div>
+              <div class="bento__actions">
+                <a href="#contact" class="btn-glow">Start a project</a>
+                <a href="#faq" class="btn-soft">Get in touch</a>
+              </div>
             </article>
-
-            <article class="work-card" data-cat="system web">
-              <a class="work-card__link" href="#">
-                <div class="work-card__frame">
-                  <div class="work-card__media">
-                    <img class="work-card__img" src="https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=1200&auto=format&fit=crop" alt="Sistema de Inventario" loading="lazy">
-                  </div>
-                  <span class="work-card__sheen"></span>
-                </div>
-                <div class="work-card__bar"></div>
-                <div class="work-card__row">
-                  <div class="work-card__id">
-                    <span class="work-card__num">06</span>
-                    <h3 class="work-card__name">Sistema de Inventario</h3>
-                  </div>
-                  <div class="work-card__tail">
-                    <span class="work-card__tags">Product · Systems</span>
-                    <span class="work-card__year">2025</span>
-                    <span class="work-card__go" aria-hidden="true">
-                      <svg viewBox="0 0 16 16"><path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.8M11.5 4.5v5.7" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </article>
-
           </div>
-
-          <p class="work__empty" aria-live="polite">No projects in this category yet.</p>
         </div>
       </section>
+
+
+      <!-- ==========================================================
+           SERVICES · pestañas fijas que siguen al scroll
+           ========================================================== -->
+      <section class="sec services" id="services">
+        <div class="sec__inner">
+          <header class="sec-head">
+            <div class="sec-eyebrow"><svg class="ico"><use href="#i-layers"/></svg>Services</div>
+            <div class="sec-head__row">
+              <h2 class="sec-title">Everything your business runs on</h2>
+              <p class="sec-lede">From the first sketch to production — one team, one connected process.</p>
+            </div>
+          </header>
+
+          <div class="services__layout">
+            <nav class="services__tabs" aria-label="Services">
+              <button type="button" class="services__tab is-active" data-target="svc-platforms">
+                <svg class="ico"><use href="#i-window"/></svg>Web platforms<i class="services__bar"><b></b></i>
+              </button>
+              <button type="button" class="services__tab" data-target="svc-integrations">
+                <svg class="ico"><use href="#i-link"/></svg>Integrations<i class="services__bar"><b></b></i>
+              </button>
+              <button type="button" class="services__tab" data-target="svc-cloud">
+                <svg class="ico"><use href="#i-cloud"/></svg>Cloud &amp; care<i class="services__bar"><b></b></i>
+              </button>
+            </nav>
+
+            <div class="services__cards">
+              <article class="svc-card" id="svc-platforms">
+                <div class="svc-card__text">
+                  <h3>Custom web platforms</h3>
+                  <p>Internal tools, client portals and SaaS products designed around the way your team works.</p>
+                  <ul class="chips">
+                    <li><svg class="ico"><use href="#i-users"/></svg>ERP &amp; CRM</li>
+                    <li><svg class="ico"><use href="#i-cart"/></svg>E-commerce</li>
+                    <li><svg class="ico"><use href="#i-book"/></svg>Booking</li>
+                    <li><svg class="ico"><use href="#i-chart"/></svg>Dashboards</li>
+                  </ul>
+                  <a href="/projects.html" class="btn-soft">See our work</a>
+                </div>
+                <div class="svc-card__visual vis-modules" aria-hidden="true">
+                  <div class="vis-modules__grid">
+                    <div class="glass-tile"><span><svg class="ico"><use href="#i-database"/></svg>Inventory</span><i></i><i></i></div>
+                    <div class="glass-tile"><span><svg class="ico"><use href="#i-card"/></svg>Billing</span><i></i><i></i></div>
+                    <div class="glass-tile"><span><svg class="ico"><use href="#i-users"/></svg>Customers</span><i></i><i></i></div>
+                    <div class="glass-tile"><span><svg class="ico"><use href="#i-chart"/></svg>Reports</span><i></i><i></i></div>
+                  </div>
+                  <div class="vis-modules__prompt"><span class="mini-orb"></span><span class="vis-modules__typing">New purchase order for Lima-01</span></div>
+                </div>
+              </article>
+
+              <article class="svc-card" id="svc-integrations">
+                <div class="svc-card__text">
+                  <h3>Integrations &amp; APIs</h3>
+                  <p>We connect your software with payments, messaging, ERPs and the services you already pay for.</p>
+                  <ul class="chips">
+                    <li><svg class="ico"><use href="#i-card"/></svg>Payments</li>
+                    <li><svg class="ico"><use href="#i-message"/></svg>Messaging</li>
+                    <li><svg class="ico"><use href="#i-server"/></svg>ERP systems</li>
+                    <li><svg class="ico"><use href="#i-code"/></svg>REST &amp; GraphQL</li>
+                  </ul>
+                  <a href="#integrations" class="btn-soft">How we integrate</a>
+                </div>
+                <div class="svc-card__visual vis-hub" aria-hidden="true">
+                  <div class="vis-hub__icons">
+                    <span><svg class="ico"><use href="#i-card"/></svg></span><span><svg class="ico"><use href="#i-mail"/></svg></span>
+                    <span><svg class="ico"><use href="#i-message"/></svg></span><span><svg class="ico"><use href="#i-database"/></svg></span>
+                    <span><svg class="ico"><use href="#i-cloud"/></svg></span><span><svg class="ico"><use href="#i-chart"/></svg></span>
+                  </div>
+                  <svg class="vis-hub__wires" viewBox="0 0 360 150" fill="none" preserveAspectRatio="none">
+                    <path d="M30 0 C30 70 180 60 180 150"/><path d="M90 0 C90 70 180 70 180 150"/><path d="M150 0 C150 60 180 80 180 150"/>
+                    <path d="M210 0 C210 60 180 80 180 150"/><path d="M270 0 C270 70 180 70 180 150"/><path d="M330 0 C330 70 180 60 180 150"/>
+                  </svg>
+                  <div class="orb"><img src="/quinvora.svg" alt=""></div>
+                </div>
+              </article>
+
+              <article class="svc-card" id="svc-cloud">
+                <div class="svc-card__text">
+                  <h3>Cloud, security &amp; care</h3>
+                  <p>Hosting, monitoring, backups and continuous improvements, so your platform never stops.</p>
+                  <ul class="chips">
+                    <li><svg class="ico"><use href="#i-cloud"/></svg>Hosting</li>
+                    <li><svg class="ico"><use href="#i-gauge"/></svg>Monitoring</li>
+                    <li><svg class="ico"><use href="#i-refresh"/></svg>Backups</li>
+                    <li><svg class="ico"><use href="#i-message"/></svg>Support</li>
+                  </ul>
+                  <a href="#plans" class="btn-soft">See plans</a>
+                </div>
+                <div class="svc-card__visual vis-uptime" aria-hidden="true">
+                  <div class="vis-uptime__panel">
+                    <div class="vis-uptime__top"><span>Uptime · 30 days</span><span class="status"><i></i>All systems normal</span></div>
+                    <strong>99.98%</strong>
+                    <div class="vis-uptime__bars"></div>
+                    <ul>
+                      <li><span>API</span><em>Operational</em></li>
+                      <li><span>Database</span><em>Operational</em></li>
+                      <li><span>Backups</span><em>2h ago</em></li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ==========================================================
+           SOLUTIONS · pestañas por sector
+           ========================================================== -->
+      <section class="sec solutions" id="solutions">
+        <div class="sec__inner">
+          <header class="sec-head">
+            <div class="sec-eyebrow"><svg class="ico"><use href="#i-grid"/></svg>Solutions</div>
+            <div class="sec-head__row">
+              <h2 class="sec-title">Built for every industry</h2>
+              <p class="sec-lede">Proven patterns we adapt to the reality of each business.</p>
+            </div>
+          </header>
+
+          <div class="pill-tabs" role="tablist" aria-label="Industries">
+            <span class="pill-tabs__glider" aria-hidden="true"></span>
+            <button type="button" role="tab" class="pill-tabs__btn is-active" aria-selected="true" data-panel="sol-retail">Retail</button>
+            <button type="button" role="tab" class="pill-tabs__btn" aria-selected="false" data-panel="sol-logistics">Logistics</button>
+            <button type="button" role="tab" class="pill-tabs__btn" aria-selected="false" data-panel="sol-services">Services</button>
+          </div>
+
+          <div class="solutions__stage">
+            <article class="sol-panel is-active" id="sol-retail" role="tabpanel">
+              <div class="sol-panel__text">
+                <h3>Retail &amp; e-commerce</h3>
+                <p>Online stores and sales platforms connected to your stock, payments and customers in real time.</p>
+                <ul class="checks">
+                  <li><svg class="ico"><use href="#i-check"/></svg>Custom checkout — sell more</li>
+                  <li><svg class="ico"><use href="#i-check"/></svg>Live inventory — never oversell</li>
+                  <li><svg class="ico"><use href="#i-check"/></svg>Loyalty &amp; CRM — keep clients coming back</li>
+                </ul>
+              </div>
+              <div class="sol-panel__shot"><img src="/projects/proyecto-alpha.svg" alt="E-commerce platform example" loading="lazy"></div>
+            </article>
+
+            <article class="sol-panel" id="sol-logistics" role="tabpanel" aria-hidden="true">
+              <div class="sol-panel__text">
+                <h3>Logistics &amp; operations</h3>
+                <p>Warehouses, fleets and orders under control, with the data your team needs to make decisions.</p>
+                <ul class="checks">
+                  <li><svg class="ico"><use href="#i-check"/></svg>Multi-warehouse stock — one source of truth</li>
+                  <li><svg class="ico"><use href="#i-check"/></svg>Barcode &amp; mobile flows — faster operations</li>
+                  <li><svg class="ico"><use href="#i-check"/></svg>Forecasting — fewer stock-outs</li>
+                </ul>
+              </div>
+              <div class="sol-panel__shot"><img src="/projects/sistema-inventario.svg" alt="Inventory system example" loading="lazy"></div>
+            </article>
+
+            <article class="sol-panel" id="sol-services" role="tabpanel" aria-hidden="true">
+              <div class="sol-panel__text">
+                <h3>Professional services</h3>
+                <p>Client portals, bookings and approval workflows that remove paperwork from your day.</p>
+                <ul class="checks">
+                  <li><svg class="ico"><use href="#i-check"/></svg>Online bookings — 24/7</li>
+                  <li><svg class="ico"><use href="#i-check"/></svg>Approval workflows — no more email chains</li>
+                  <li><svg class="ico"><use href="#i-check"/></svg>Client portal — everything in one place</li>
+                </ul>
+              </div>
+              <div class="sol-panel__shot"><img src="/projects/formindo.svg" alt="Workflow platform example" loading="lazy"></div>
+            </article>
+          </div>
+
+          <div class="industries">
+            <div class="industry" data-reveal>
+              <span class="icon-box"><svg class="ico"><use href="#i-heart"/></svg></span>
+              <h4>Healthcare</h4>
+              <p>Scheduling, patient portals and clinical records.</p>
+            </div>
+            <div class="industry" data-reveal>
+              <span class="icon-box"><svg class="ico"><use href="#i-book"/></svg></span>
+              <h4>Education</h4>
+              <p>Learning platforms and student management.</p>
+            </div>
+            <div class="industry" data-reveal>
+              <span class="icon-box"><svg class="ico"><use href="#i-chart"/></svg></span>
+              <h4>Finance</h4>
+              <p>Secure portals, reporting and automation.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ==========================================================
+           PROCESS · 3 pasos con tarjetas que se apilan
+           ========================================================== -->
+      <section class="sec process" id="process">
+        <div class="sec__inner">
+          <header class="sec-head">
+            <div class="sec-eyebrow"><svg class="ico"><use href="#i-steps"/></svg>How we work</div>
+            <div class="sec-head__row">
+              <h2 class="sec-title">3 steps to your software</h2>
+              <p class="sec-lede">From idea to launch, with a clear plan and no surprises.</p>
+            </div>
+          </header>
+
+          <div class="process__index" aria-hidden="true">
+            <div><span>01.</span><i><b></b></i></div>
+            <div><span>02.</span><i><b></b></i></div>
+            <div><span>03.</span><i><b></b></i></div>
+          </div>
+
+          <div class="process__stack">
+            <article class="step-card" style="--i: 0">
+              <div class="step-card__text">
+                <h3>Discovery &amp; design</h3>
+                <p>We map your process, define the scope and design every screen before writing a single line of code.</p>
+                <ul class="checks checks--boxed">
+                  <li><svg class="ico"><use href="#i-check"/></svg>Workshops with your team.</li>
+                  <li><svg class="ico"><use href="#i-check"/></svg>Clickable prototype you can test.</li>
+                  <li><svg class="ico"><use href="#i-check"/></svg>Fixed scope and timeline.</li>
+                </ul>
+              </div>
+              <div class="step-card__visual vis-wire" aria-hidden="true">
+                <div class="vis-wire__frame">
+                  <div class="vis-wire__bar"><i></i><i></i><i></i></div>
+                  <div class="vis-wire__body">
+                    <b class="w-hero"></b><b class="w-line"></b><b class="w-line w-line--short"></b>
+                    <div class="w-cards"><b></b><b></b><b></b></div>
+                  </div>
+                  <svg class="vis-wire__cursor" viewBox="0 0 24 24"><path d="M5 3l14 8-6 1.5L10 19z" fill="#fdfaf3" stroke="#0d0d0d" stroke-width="1.2" stroke-linejoin="round"/></svg>
+                </div>
+              </div>
+            </article>
+
+            <article class="step-card" style="--i: 1">
+              <div class="step-card__text">
+                <h3>Build &amp; iterate</h3>
+                <p>Short sprints with weekly demos, so you see real progress and can steer the product as it grows.</p>
+                <ul class="checks checks--boxed">
+                  <li><svg class="ico"><use href="#i-check"/></svg>Weekly demos and feedback.</li>
+                  <li><svg class="ico"><use href="#i-check"/></svg>Staging environment from day one.</li>
+                  <li><svg class="ico"><use href="#i-check"/></svg>Clean code that you own.</li>
+                </ul>
+              </div>
+              <div class="step-card__visual vis-tasks" aria-hidden="true">
+                <div class="task"><span class="task__icon"><svg class="ico"><use href="#i-pencil"/></svg></span><div><strong>Sprint 1 · Auth &amp; roles</strong><small>Delivered</small></div></div>
+                <div class="task task--active"><span class="task__icon"><svg class="ico"><use href="#i-server"/></svg></span><div><strong>Sprint 2 · Dashboard</strong><small>In review</small></div></div>
+                <div class="task"><span class="task__icon"><svg class="ico"><use href="#i-rocket"/></svg></span><div><strong>Sprint 3 · Payments</strong><small>Next up</small></div></div>
+              </div>
+            </article>
+
+            <article class="step-card" style="--i: 2">
+              <div class="step-card__text">
+                <h3>Launch &amp; support</h3>
+                <p>We deploy, monitor and keep improving your platform long after go-live.</p>
+                <ul class="checks checks--boxed">
+                  <li><svg class="ico"><use href="#i-check"/></svg>Zero-downtime deploys.</li>
+                  <li><svg class="ico"><use href="#i-check"/></svg>Monitoring and daily backups.</li>
+                  <li><svg class="ico"><use href="#i-check"/></svg>Continuous improvements.</li>
+                </ul>
+              </div>
+              <div class="step-card__visual vis-launch" aria-hidden="true">
+                <div class="orb orb--lg"><img src="/quinvora.svg" alt=""></div>
+                <span class="vis-launch__btn"><i></i>Deploy to production</span>
+                <div class="vis-launch__chips"><span>Live</span><span>SSL</span><span>Backups</span></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ==========================================================
+           SECURITY
+           ========================================================== -->
+      <section class="sec security" id="security">
+        <div class="sec__inner security__grid">
+          <div class="security__text">
+            <div class="sec-eyebrow sec-eyebrow--ruled"><svg class="ico"><use href="#i-shield"/></svg>Security</div>
+            <h2 class="sec-title">Security by design</h2>
+            <p class="sec-lede">Every platform we ship follows best practices from day one — from encrypted data to monitored infrastructure.</p>
+            <ul class="sec-list">
+              <li data-reveal><svg class="ico"><use href="#i-lock"/></svg>Encrypted data, in transit and at rest</li>
+              <li data-reveal><svg class="ico"><use href="#i-key"/></svg>Role-based access for every user</li>
+              <li data-reveal><svg class="ico"><use href="#i-server"/></svg>Backups and 24/7 monitoring</li>
+            </ul>
+          </div>
+          <div class="security__visual" aria-hidden="true">
+            <div class="panes"><i></i><i></i><i></i><i></i></div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ==========================================================
+           TESTIMONIALS
+           Textos de ejemplo: sustitúyelos por testimonios reales
+           y cambia .testi__photo por <img src="..."> (600 × 720 px).
+           ========================================================== -->
+      <section class="sec testimonials" id="testimonials">
+        <div class="sec__inner">
+          <header class="sec-head">
+            <div class="sec-eyebrow"><svg class="ico"><use href="#i-quote"/></svg>Testimonials</div>
+            <div class="sec-head__row">
+              <h2 class="sec-title">Trusted by our clients</h2>
+              <p class="sec-lede">What the teams we work with say about the process and the results.</p>
+            </div>
+          </header>
+        </div>
+
+        <div class="swiper testi-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide testi">
+              <div class="testi__photo"><span>CN</span></div>
+              <div class="testi__body">
+                <blockquote>“Quinvora understood our process better than we did. The platform replaced three tools and a dozen spreadsheets — and our team actually enjoys using it.”</blockquote>
+                <div class="testi__author"><strong>Client Name</strong><span>Operations Manager, Company</span></div>
+              </div>
+            </div>
+            <div class="swiper-slide testi">
+              <div class="testi__photo"><span>CN</span></div>
+              <div class="testi__body">
+                <blockquote>“Weekly demos meant no surprises. We launched on time, and the system has been running without a single incident since day one.”</blockquote>
+                <div class="testi__author"><strong>Client Name</strong><span>CEO, Company</span></div>
+              </div>
+            </div>
+            <div class="swiper-slide testi">
+              <div class="testi__photo"><span>CN</span></div>
+              <div class="testi__body">
+                <blockquote>“Fast, clear and honest. They built exactly what we needed, integrated it with our ERP and keep improving it month after month.”</blockquote>
+                <div class="testi__author"><strong>Client Name</strong><span>Head of Technology, Company</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-nav">
+          <button type="button" class="testi-nav__btn" data-dir="prev" aria-label="Previous testimonial"><svg class="ico"><use href="#i-left"/></svg></button>
+          <button type="button" class="testi-nav__btn" data-dir="next" aria-label="Next testimonial"><svg class="ico"><use href="#i-right"/></svg></button>
+        </div>
+      </section>
+
+
+      <!-- ==========================================================
+           PLANS
+           ========================================================== -->
+      <section class="sec plans" id="plans">
+        <div class="sec__inner">
+          <header class="sec-head">
+            <div class="sec-eyebrow"><svg class="ico"><use href="#i-tag"/></svg>Plans</div>
+            <div class="sec-head__row">
+              <h2 class="sec-title">Flexible plans for every stage</h2>
+              <p class="sec-lede">Start small or go all in — every plan includes design, development and launch.</p>
+            </div>
+          </header>
+
+          <div class="plans__grid">
+            <article class="plan" data-reveal>
+              <div class="plan__head">
+                <h3>Launch</h3>
+                <p>Websites and landing pages that turn visitors into clients.</p>
+                <div class="plan__figure"><strong>2–4</strong><span>weeks</span></div>
+                <a href="#contact" class="btn-glow plan__btn">Get a quote</a>
+              </div>
+              <ul class="checks plan__list">
+                <li><svg class="ico"><use href="#i-check"/></svg>Custom design, no templates</li>
+                <li><svg class="ico"><use href="#i-check"/></svg>Up to 8 pages</li>
+                <li><svg class="ico"><use href="#i-check"/></svg>CMS to edit your content</li>
+                <li><svg class="ico"><use href="#i-check"/></svg>SEO and analytics setup</li>
+                <li><svg class="ico"><use href="#i-check"/></svg>Hosting for the first year</li>
+              </ul>
+              <div class="plan__foot"><i></i><span>Ideal for new brands</span></div>
+            </article>
+
+            <article class="plan plan--featured" data-reveal>
+              <div class="plan__head">
+                <h3>Build <em>Most requested</em></h3>
+                <p>A web platform built around your operation.</p>
+                <div class="plan__figure"><strong>6–12</strong><span>weeks</span></div>
+                <a href="#contact" class="btn-glow plan__btn">Get a quote</a>
+              </div>
+              <ul class="checks plan__list">
+                <li><svg class="ico"><use href="#i-check"/></svg>Everything in Launch</li>
+                <li><svg class="ico"><use href="#i-check"/></svg>Users, roles and permissions</li>
+                <li><svg class="ico"><use href="#i-check"/></svg>Dashboards and reports</li>
+                <li><svg class="ico"><use href="#i-check"/></svg>Up to 3 integrations</li>
+                <li><svg class="ico"><use href="#i-check"/></svg>3 months of support included</li>
+              </ul>
+              <div class="plan__foot"><i></i><span>Ideal for growing teams</span></div>
+            </article>
+
+            <article class="plan" data-reveal>
+              <div class="plan__head">
+                <h3>Scale</h3>
+                <p>A dedicated team for complex, long-term software.</p>
+                <div class="plan__figure"><strong>Ongoing</strong></div>
+                <a href="#contact" class="btn-glow plan__btn">Talk to us</a>
+              </div>
+              <ul class="checks plan__list">
+                <li><svg class="ico"><use href="#i-check"/></svg>Dedicated product team</li>
+                <li><svg class="ico"><use href="#i-check"/></svg>Unlimited integrations</li>
+                <li><svg class="ico"><use href="#i-check"/></svg>SLA and 24/7 monitoring</li>
+              </ul>
+              <div class="plan__foot"><i></i><span>Ideal for enterprises</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ==========================================================
+           FAQ
+           ========================================================== -->
+      <section class="sec faq" id="faq">
+        <div class="sec__inner">
+          <header class="sec-head">
+            <div class="sec-eyebrow"><svg class="ico"><use href="#i-info"/></svg>FAQ</div>
+            <div class="sec-head__row">
+              <h2 class="sec-title">Questions before we start?</h2>
+              <p class="sec-lede">Everything you need to know before starting your project.</p>
+            </div>
+          </header>
+
+          <div class="faq__grid">
+            <div class="faq__col">
+              <details class="faq-item">
+                <summary>What does “custom software” mean?<span class="faq-item__icon"><svg class="ico"><use href="#i-plus"/></svg></span></summary>
+                <div class="faq-item__body"><p>Software designed and built from scratch for your business: your processes, your users and your data. Instead of adapting your team to a generic tool, the tool adapts to you.</p></div>
+              </details>
+              <details class="faq-item">
+                <summary>How long does a project take?<span class="faq-item__icon"><svg class="ico"><use href="#i-plus"/></svg></span></summary>
+                <div class="faq-item__body"><p>A website usually takes 2 to 4 weeks and a web platform 6 to 12 weeks. After the discovery phase you get a detailed timeline with fixed milestones.</p></div>
+              </details>
+              <details class="faq-item">
+                <summary>How much does custom software cost?<span class="faq-item__icon"><svg class="ico"><use href="#i-plus"/></svg></span></summary>
+                <div class="faq-item__body"><p>It depends on the scope. After a first call we send a clear quote with a fixed price per phase, so you always know what you are paying for.</p></div>
+              </details>
+              <details class="faq-item">
+                <summary>Do I own the code?<span class="faq-item__icon"><svg class="ico"><use href="#i-plus"/></svg></span></summary>
+                <div class="faq-item__body"><p>Yes. The code, the data and the accounts are yours from day one. You can keep working with us or take the project anywhere.</p></div>
+              </details>
+            </div>
+            <div class="faq__col">
+              <details class="faq-item">
+                <summary>Can you integrate with the systems we already use?<span class="faq-item__icon"><svg class="ico"><use href="#i-plus"/></svg></span></summary>
+                <div class="faq-item__body"><p>Yes. We connect with ERPs, payment gateways, messaging, accounting and any service with an API — or build one when it doesn’t exist.</p></div>
+              </details>
+              <details class="faq-item">
+                <summary>What technologies do you work with?<span class="faq-item__icon"><svg class="ico"><use href="#i-plus"/></svg></span></summary>
+                <div class="faq-item__body"><p>Modern, proven web technology: TypeScript, React, Next.js, Node.js, PostgreSQL and major cloud providers. We choose the stack that best fits each project.</p></div>
+              </details>
+              <details class="faq-item">
+                <summary>What happens after launch?<span class="faq-item__icon"><svg class="ico"><use href="#i-plus"/></svg></span></summary>
+                <div class="faq-item__body"><p>We monitor the platform, run backups, fix issues and keep improving it with a monthly care plan that fits your needs.</p></div>
+              </details>
+              <details class="faq-item">
+                <summary>Can you improve an existing platform?<span class="faq-item__icon"><svg class="ico"><use href="#i-plus"/></svg></span></summary>
+                <div class="faq-item__body"><p>Yes. We audit what you have, fix what is urgent and plan improvements step by step — without stopping your operation.</p></div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ==========================================================
+           INTEGRATIONS
+           ========================================================== -->
+      <section class="sec integrations" id="integrations">
+        <div class="integrations__beam" aria-hidden="true"></div>
+        <div class="sec__inner integrations__grid">
+          <div class="integrations__text">
+            <div class="sec-eyebrow sec-eyebrow--ruled"><svg class="ico"><use href="#i-plug"/></svg>Integrations</div>
+            <h2 class="sec-title">Connects with the tools you already use</h2>
+            <p class="sec-lede">Payments, messaging, accounting and analytics — we plug your platform into your ecosystem.</p>
+            <a href="#contact" class="btn-soft">Know more</a>
+          </div>
+          <div class="integrations__tiles">
+            <span class="int-tile" data-reveal><svg class="ico"><use href="#i-card"/></svg></span>
+            <span class="int-tile" data-reveal><svg class="ico"><use href="#i-message"/></svg></span>
+            <span class="int-tile" data-reveal><svg class="ico"><use href="#i-mail"/></svg></span>
+            <span class="int-tile" data-reveal><svg class="ico"><use href="#i-database"/></svg></span>
+            <span class="int-tile" data-reveal><svg class="ico"><use href="#i-cloud"/></svg></span>
+            <span class="int-tile" data-reveal><svg class="ico"><use href="#i-chart"/></svg></span>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ==========================================================
+           FOOTER
+           Cambia los href="#" por tu email / redes reales.
+           ========================================================== -->
+      <footer class="site-foot" id="contact">
+        <div class="site-foot__cta">
+          <h2 class="site-foot__title">Step into Quinvora Code —<br>software built around you</h2>
+          <p>Tell us what your business needs. We’ll design, build and run it with you.</p>
+          <a href="#" class="btn-glow">Start a project</a>
+        </div>
+
+        <div class="site-foot__mark" aria-hidden="true">
+          <div class="site-foot__glow"></div>
+          <div class="site-foot__word">
+            <span class="ghost">CODE</span><span class="main">QUINVORACODE</span><span class="ghost">QUINVORA</span>
+          </div>
+        </div>
+
+        <div class="site-foot__cols">
+          <div>
+            <h4>Navigation</h4>
+            <a href="/">Home</a>
+            <a href="/projects.html">Work</a>
+            <a href="/#services">Services</a>
+            <a href="/#why">About</a>
+          </div>
+          <div>
+            <h4>Services</h4>
+            <a href="/#svc-platforms">Web platforms</a>
+            <a href="/#svc-integrations">Integrations</a>
+            <a href="/#svc-cloud">Cloud &amp; care</a>
+            <a href="/#process">How we work</a>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <a href="/#faq">FAQ</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms and conditions</a>
+            <button type="button" data-cookie-settings>Cookie settings</button>
+          </div>
+          <div>
+            <h4>Social</h4>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">X / Twitter</a>
+            <a href="#">GitHub</a>
+          </div>
+        </div>
+
+        <div class="site-foot__bottom">
+          <span>All rights reserved © 2026 Quinvora Code</span>
+          <span>Designed &amp; built by Quinvora Code</span>
+        </div>
+      </footer>
+    </div>
+
+    <div class="cookie" role="dialog" aria-modal="false" aria-labelledby="cookie-title" aria-describedby="cookie-text" hidden>
+      <div class="cookie__body">
+        <p class="cookie__title" id="cookie-title">We value your privacy</p>
+        <p class="cookie__text" id="cookie-text">We use essential cookies to make this site work and, only if you allow it, analytics cookies to understand how it’s used.</p>
+      </div>
+      <div class="cookie__actions">
+        <button type="button" class="cookie__btn cookie__btn--ghost" data-consent="rejected">Reject</button>
+        <button type="button" class="cookie__btn cookie__btn--solid" data-consent="accepted">Accept</button>
+      </div>
     </div>
 
     <script type="module" src="/src/main.ts"></script>

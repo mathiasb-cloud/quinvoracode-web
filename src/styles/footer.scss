@@ -1,0 +1,178 @@
+/* ============================================================
+   FOOTER · CTA final, nombre gigante luminoso y enlaces
+   ============================================================ */
+
+$pad: clamp(1.25rem, 5vw, 5rem);
+
+.site-foot {
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  background-color: var(--ink);
+  color: var(--white);
+  padding-top: clamp(6rem, 16vh, 10rem);
+}
+
+.site-foot__cta {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  justify-items: center;
+  gap: 1.4rem;
+  padding: 0 $pad;
+  text-align: center;
+
+  p {
+    max-width: 44ch;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .btn-glow { margin-top: 1rem; }
+}
+
+.site-foot__title {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+/* ---------- Nombre gigante ---------- */
+
+.site-foot__mark {
+  position: relative;
+  margin-top: clamp(2rem, 6vh, 4rem);
+  padding: 3vw 0 5vw;
+}
+
+/* Resplandor en forma de horizonte detrás de las letras */
+.site-foot__glow {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  background:
+    radial-gradient(30% 55% at 32% 62%, rgba(var(--amber), 0.2), transparent 72%),
+    radial-gradient(30% 55% at 68% 62%, rgba(var(--azure), 0.2), transparent 72%);
+
+  /* arco del horizonte: solo se ve su borde superior */
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 72%;
+    width: 130vw;
+    height: 80vw;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    border-top: 1px solid rgba(255, 255, 255, 0.45);
+    background: radial-gradient(50% 12% at 50% 0%, rgba(var(--glow), 0.16), transparent 100%);
+    box-shadow: -120px -24px 90px -40px rgba(var(--amber), 0.3), 120px -24px 90px -40px rgba(var(--azure), 0.3);
+  }
+}
+
+.site-foot__word {
+  position: relative;
+  width: max-content;
+  margin-inline: auto;
+  white-space: nowrap;
+  font-size: clamp(2.6rem, 10vw, 11rem);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+  user-select: none;
+
+  .main {
+    /* degradado cíclico (empieza y termina igual) para que el brillo no tenga cortes */
+    background: linear-gradient(100deg, #f0b06a 0%, #f6e6cc 14%, #ffffff 28%, #b3cbf2 50%, #ffffff 72%, #f6e6cc 86%, #f0b06a 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 0 28px rgba(255, 248, 236, 0.35));
+    animation: wordShine 9s linear infinite;
+  }
+
+  /* copias tenues a los lados, fuera del flujo para no descentrar */
+  .ghost {
+    position: absolute;
+    top: 0;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.12);
+
+    &:first-child { right: calc(100% + 0.18em); }
+    &:last-child { left: calc(100% + 0.18em); }
+  }
+}
+
+@keyframes wordShine {
+  to { background-position: -200% 0; }
+}
+
+/* ---------- Columnas ---------- */
+
+.site-foot__cols {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding: 0 $pad 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2rem;
+
+  div { display: grid; align-content: start; gap: 1rem; }
+
+  h4 {
+    margin-bottom: 0.4rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #f3f0ea;
+  }
+
+  a,
+  button {
+    justify-self: start;
+    padding: 0;
+    border: none;
+    background: none;
+    font: inherit;
+    font-size: 0.98rem;
+    color: #8f8b85;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover { color: #fff; }
+  }
+}
+
+.site-foot__bottom {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding: 1.8rem $pad 2.2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
+  color: #6f6b65;
+}
+
+@media (max-width: 768px) {
+  .site-foot__cols { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 2.5rem; }
+  .site-foot__bottom { flex-direction: column; }
+  .site-foot__word .ghost { display: none; }
+  .site-foot__word { font-size: 11vw; }
+  .site-foot__glow::after { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-foot__word .main { animation: none; }
+}

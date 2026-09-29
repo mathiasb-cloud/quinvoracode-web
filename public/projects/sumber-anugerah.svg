@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 3200" width="1440" height="3200" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<defs><linearGradient id="shine" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".18"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<radialGradient id="glow" cx=".5" cy="0" r=".6"><stop offset="0" stop-color="#14b8a6" stop-opacity=".22"/><stop offset="1" stop-color="#14b8a6" stop-opacity="0"/></radialGradient></defs>
+<rect width="1440" height="3200" fill="#0b0b10"/>
+<rect width="1440" height="1100" fill="url(#glow)"/>
+<rect x="120" y="30" width="28" height="28" rx="8" fill="#14b8a6" opacity="1"/>
+<text x="160" y="52" font-size="20" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="0">Sumber Anugerah</text>
+<text x="560" y="51" font-size="16" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">Product</text>
+<text x="678" y="51" font-size="16" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">Solutions</text>
+<text x="796" y="51" font-size="16" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">Pricing</text>
+<text x="914" y="51" font-size="16" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">Company</text>
+<rect x="1170" y="24" width="150" height="42" rx="21" fill="#14b8a6" opacity="1"/>
+<text x="1245" y="51" font-size="15" font-weight="600" fill="#0b0b10" text-anchor="middle" letter-spacing="0">Get started</text>
+<line x1="0" y1="88" x2="1440" y2="88" stroke="rgba(255,255,255,0.08)"/>
+<rect x="602.0" y="168" width="236" height="34" rx="17" fill="none" stroke="#14b8a6" opacity="1"/>
+<rect x="602.0" y="168" width="236" height="34" rx="17" fill="#14b8a6" opacity=".12"/>
+<text x="720" y="191" font-size="14" font-weight="600" fill="#14b8a6" text-anchor="middle" letter-spacing="0">Shipyard project control</text>
+<text x="720" y="298" font-size="76" font-weight="600" fill="#f5f5f7" text-anchor="middle" letter-spacing="-2.5">Every vessel,</text>
+<text x="720" y="382" font-size="76" font-weight="600" fill="#f5f5f7" text-anchor="middle" letter-spacing="-2.5">on schedule.</text>
+<text x="720" y="466" font-size="20" font-weight="400" fill="#8a8a96" text-anchor="middle" letter-spacing="0">Planning, dry-dock slots and work orders for a modern shipyard.</text>
+<rect x="560" y="506" width="150" height="52" rx="26" fill="#14b8a6" opacity="1"/>
+<text x="635" y="538" font-size="16" font-weight="600" fill="#0b0b10" text-anchor="middle" letter-spacing="0">Start now</text>
+<rect x="730" y="506" width="150" height="52" rx="26" fill="none" stroke="rgba(255,255,255,0.08)" opacity="1"/>
+<text x="805" y="538" font-size="16" font-weight="500" fill="#f5f5f7" text-anchor="middle" letter-spacing="0">Book a demo</text>
+<rect x="120" y="606" width="1200" height="620" rx="20" fill="#15151c" stroke="rgba(255,255,255,0.08)"/>
+<rect x="120" y="606" width="1200" height="620" rx="20" fill="#14b8a6" opacity=".03"/>
+<clipPath id="appclip"><rect x="120" y="606" width="1200" height="620" rx="20"/></clipPath><g clip-path="url(#appclip)">
+<rect x="120" y="606" width="220" height="620" rx="20" fill="#1c1c25" opacity=".7"/>
+<rect x="144" y="634" width="24" height="24" rx="7" fill="#14b8a6" opacity="1"/>
+<rect x="178" y="640" width="90" height="12" rx="6" fill="#f5f5f7" opacity="0.7"/>
+<rect x="148" y="702" width="14" height="14" rx="4" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="174" y="703" width="71" height="11" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="132" y="734" width="196" height="40" rx="10" fill="#14b8a6" opacity=".14"/>
+<rect x="148" y="748" width="14" height="14" rx="4" fill="#14b8a6" opacity="1"/>
+<rect x="174" y="749" width="103" height="11" rx="5" fill="#f5f5f7" opacity="0.8"/>
+<rect x="148" y="794" width="14" height="14" rx="4" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="174" y="795" width="104" height="11" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="148" y="840" width="14" height="14" rx="4" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="174" y="841" width="78" height="11" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="148" y="886" width="14" height="14" rx="4" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="174" y="887" width="74" height="11" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="148" y="932" width="14" height="14" rx="4" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="174" y="933" width="94" height="11" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<text x="380" y="666" font-size="26" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="0">Fleet schedule · Q3</text>
+<text x="580" y="716" font-size="12" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">W27</text>
+<line x1="574" y1="730" x2="574" y2="1196" stroke="rgba(255,255,255,0.08)"/>
+<text x="638" y="716" font-size="12" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">W28</text>
+<line x1="632" y1="730" x2="632" y2="1196" stroke="rgba(255,255,255,0.08)"/>
+<text x="696" y="716" font-size="12" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">W29</text>
+<line x1="690" y1="730" x2="690" y2="1196" stroke="rgba(255,255,255,0.08)"/>
+<text x="754" y="716" font-size="12" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">W30</text>
+<line x1="748" y1="730" x2="748" y2="1196" stroke="rgba(255,255,255,0.08)"/>
+<text x="812" y="716" font-size="12" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">W31</text>
+<line x1="806" y1="730" x2="806" y2="1196" stroke="rgba(255,255,255,0.08)"/>
+<text x="870" y="716" font-size="12" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">W32</text>
+<line x1="864" y1="730" x2="864" y2="1196" stroke="rgba(255,255,255,0.08)"/>
+<text x="928" y="716" font-size="12" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">W33</text>
+<line x1="922" y1="730" x2="922" y2="1196" stroke="rgba(255,255,255,0.08)"/>
+<text x="986" y="716" font-size="12" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">W34</text>
+<line x1="980" y1="730" x2="980" y2="1196" stroke="rgba(255,255,255,0.08)"/>
+<text x="1044" y="716" font-size="12" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">W35</text>
+<line x1="1038" y1="730" x2="1038" y2="1196" stroke="rgba(255,255,255,0.08)"/>
+<text x="1102" y="716" font-size="12" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">W36</text>
+<line x1="1096" y1="730" x2="1096" y2="1196" stroke="rgba(255,255,255,0.08)"/>
+<text x="1160" y="716" font-size="12" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">W37</text>
+<line x1="1154" y1="730" x2="1154" y2="1196" stroke="rgba(255,255,255,0.08)"/>
+<text x="1218" y="716" font-size="12" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">W38</text>
+<line x1="1212" y1="730" x2="1212" y2="1196" stroke="rgba(255,255,255,0.08)"/>
+<rect x="380" y="758" width="150" height="12" rx="6" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="576" y="746" width="340" height="36" rx="8" fill="#14b8a6" opacity=".85"/>
+<rect x="590" y="759" width="110" height="10" rx="5" fill="#ffffff" opacity="0.8"/>
+<rect x="380" y="814" width="150" height="12" rx="6" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="692" y="802" width="166" height="36" rx="8" fill="#6366f1" opacity=".85"/>
+<rect x="706" y="815" width="110" height="10" rx="5" fill="#ffffff" opacity="0.8"/>
+<rect x="380" y="870" width="150" height="12" rx="6" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="634" y="858" width="282" height="36" rx="8" fill="#f59e0b" opacity=".85"/>
+<rect x="648" y="871" width="110" height="10" rx="5" fill="#ffffff" opacity="0.8"/>
+<rect x="380" y="926" width="150" height="12" rx="6" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="576" y="914" width="224" height="36" rx="8" fill="#14b8a6" opacity=".85"/>
+<rect x="590" y="927" width="110" height="10" rx="5" fill="#ffffff" opacity="0.8"/>
+<rect x="380" y="982" width="150" height="12" rx="6" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="866" y="970" width="224" height="36" rx="8" fill="#ec4899" opacity=".85"/>
+<rect x="880" y="983" width="110" height="10" rx="5" fill="#ffffff" opacity="0.8"/>
+<rect x="380" y="1038" width="150" height="12" rx="6" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="750" y="1026" width="282" height="36" rx="8" fill="#6366f1" opacity=".85"/>
+<rect x="764" y="1039" width="110" height="10" rx="5" fill="#ffffff" opacity="0.8"/>
+<rect x="380" y="1094" width="150" height="12" rx="6" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="692" y="1082" width="166" height="36" rx="8" fill="#14b8a6" opacity=".85"/>
+<rect x="706" y="1095" width="110" height="10" rx="5" fill="#ffffff" opacity="0.8"/>
+<rect x="380" y="1150" width="150" height="12" rx="6" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="808" y="1138" width="282" height="36" rx="8" fill="#f59e0b" opacity=".85"/>
+<rect x="822" y="1151" width="110" height="10" rx="5" fill="#ffffff" opacity="0.8"/>
+<line x1="893" y1="730" x2="893" y2="1196" stroke="#ef4444" stroke-width="2"/>
+</g>
+<text x="720" y="1346" font-size="14" font-weight="400" fill="#8a8a96" text-anchor="middle" letter-spacing="1.5">Trusted by teams at</text>
+<rect x="170" y="1382" width="140" height="30" rx="8" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="360" y="1382" width="140" height="30" rx="8" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="550" y="1382" width="140" height="30" rx="8" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="740" y="1382" width="140" height="30" rx="8" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="930" y="1382" width="140" height="30" rx="8" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="1120" y="1382" width="140" height="30" rx="8" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<text x="120" y="1536" font-size="48" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="-1.5">Control every dock</text>
+<rect x="120" y="1576" width="520" height="14" rx="7.0" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="120" y="1602" width="255.8199288216146" height="14" rx="7.0" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="120" y="1666" width="384" height="300" rx="18" fill="#15151c" stroke="rgba(255,255,255,0.08)"/>
+<rect x="152" y="1698" width="48" height="48" rx="12" fill="#14b8a6" opacity=".16"/>
+<rect x="168" y="1714" width="16" height="16" rx="4" fill="#14b8a6" opacity="1"/>
+<text x="152" y="1796" font-size="22" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="0">Dock planning</text>
+<rect x="152" y="1826" width="300" height="11" rx="5.5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="152" y="1848" width="300" height="11" rx="5.5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="152" y="1870" width="172.85513167780522" height="11" rx="5.5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="528" y="1666" width="384" height="300" rx="18" fill="#15151c" stroke="rgba(255,255,255,0.08)"/>
+<rect x="560" y="1698" width="48" height="48" rx="12" fill="#14b8a6" opacity=".16"/>
+<rect x="576" y="1714" width="16" height="16" rx="4" fill="#14b8a6" opacity="1"/>
+<text x="560" y="1796" font-size="22" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="0">Work orders</text>
+<rect x="560" y="1826" width="300" height="11" rx="5.5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="560" y="1848" width="300" height="11" rx="5.5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="560" y="1870" width="149.86549975333438" height="11" rx="5.5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="936" y="1666" width="384" height="300" rx="18" fill="#15151c" stroke="rgba(255,255,255,0.08)"/>
+<rect x="968" y="1698" width="48" height="48" rx="12" fill="#14b8a6" opacity=".16"/>
+<rect x="984" y="1714" width="16" height="16" rx="4" fill="#14b8a6" opacity="1"/>
+<text x="968" y="1796" font-size="22" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="0">Cost tracking</text>
+<rect x="968" y="1826" width="300" height="11" rx="5.5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="968" y="1848" width="300" height="11" rx="5.5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="968" y="1870" width="201.59739743996678" height="11" rx="5.5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<line x1="120" y1="2056" x2="1320" y2="2056" stroke="rgba(255,255,255,0.08)"/>
+<text x="120" y="2166" font-size="56" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="-2">46</text>
+<text x="120" y="2202" font-size="16" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">Vessels / year</text>
+<text x="420" y="2166" font-size="56" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="-2">22%</text>
+<text x="420" y="2202" font-size="16" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">Less idle time</text>
+<text x="720" y="2166" font-size="56" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="-2">8</text>
+<text x="720" y="2202" font-size="16" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">Docks</text>
+<text x="1020" y="2166" font-size="56" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="-2">100%</text>
+<text x="1020" y="2202" font-size="16" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">Traceability</text>
+<line x1="120" y1="2266" x2="1320" y2="2266" stroke="rgba(255,255,255,0.08)"/>
+<rect x="120" y="2356" width="1200" height="360" rx="28" fill="#14b8a6"/>
+<rect x="120" y="2356" width="1200" height="360" rx="28" fill="url(#shine)"/>
+<text x="720" y="2506" font-size="52" font-weight="600" fill="#0b0b10" text-anchor="middle" letter-spacing="-1.5">Build ships, not spreadsheets.</text>
+<text x="720" y="2552" font-size="19" font-weight="400" fill="#0b0b10" text-anchor="middle" letter-spacing="0">Custom-built for the way your team works.</text>
+<rect x="630" y="2592" width="180" height="54" rx="27" fill="#0b0b10"/>
+<text x="720" y="2626" font-size="16" font-weight="600" fill="#14b8a6" text-anchor="middle" letter-spacing="0">Talk to us</text>
+<line x1="0" y1="2816" x2="1440" y2="2816" stroke="rgba(255,255,255,0.08)"/>
+<rect x="120" y="2876" width="28" height="28" rx="8" fill="#14b8a6" opacity="1"/>
+<text x="160" y="2898" font-size="18" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="0">Sumber Anugerah</text>
+<rect x="120" y="2936" width="260" height="10" rx="5.0" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="120" y="2956" width="160.34331416134222" height="10" rx="5.0" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="620" y="2880" width="70" height="12" rx="6" fill="#f5f5f7" opacity="0.55"/>
+<rect x="620" y="2916" width="85" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="620" y="2946" width="97" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="620" y="2976" width="113" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="620" y="3006" width="90" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="800" y="2880" width="70" height="12" rx="6" fill="#f5f5f7" opacity="0.55"/>
+<rect x="800" y="2916" width="97" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="800" y="2946" width="71" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="800" y="2976" width="119" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="800" y="3006" width="76" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="980" y="2880" width="70" height="12" rx="6" fill="#f5f5f7" opacity="0.55"/>
+<rect x="980" y="2916" width="89" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="980" y="2946" width="97" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="980" y="2976" width="112" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="980" y="3006" width="99" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="1160" y="2880" width="70" height="12" rx="6" fill="#f5f5f7" opacity="0.55"/>
+<rect x="1160" y="2916" width="115" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="1160" y="2946" width="116" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="1160" y="2976" width="95" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="1160" y="3006" width="120" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<line x1="120" y1="3120" x2="1320" y2="3120" stroke="rgba(255,255,255,0.08)"/>
+<text x="120" y="3160" font-size="14" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">© 2026 Sumber Anugerah</text>
+<text x="1320" y="3160" font-size="13" font-weight="400" fill="#8a8a96" text-anchor="end" letter-spacing="0">Placeholder · 1440 × 3200 — reemplazar</text>
+</svg>

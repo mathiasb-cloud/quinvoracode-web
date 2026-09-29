@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 3200" width="1440" height="3200" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<defs><linearGradient id="shine" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".18"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<radialGradient id="glow" cx=".5" cy="0" r=".6"><stop offset="0" stop-color="#a78bfa" stop-opacity=".22"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0"/></radialGradient></defs>
+<rect width="1440" height="3200" fill="#0b0b10"/>
+<rect width="1440" height="1100" fill="url(#glow)"/>
+<rect x="120" y="30" width="28" height="28" rx="8" fill="#a78bfa" opacity="1"/>
+<text x="160" y="52" font-size="20" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="0">Lavely</text>
+<text x="560" y="51" font-size="16" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">Product</text>
+<text x="678" y="51" font-size="16" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">Solutions</text>
+<text x="796" y="51" font-size="16" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">Pricing</text>
+<text x="914" y="51" font-size="16" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">Company</text>
+<rect x="1170" y="24" width="150" height="42" rx="21" fill="#a78bfa" opacity="1"/>
+<text x="1245" y="51" font-size="15" font-weight="600" fill="#0b0b10" text-anchor="middle" letter-spacing="0">Get started</text>
+<line x1="0" y1="88" x2="1440" y2="88" stroke="rgba(255,255,255,0.08)"/>
+<rect x="582.0" y="168" width="276" height="34" rx="17" fill="none" stroke="#a78bfa" opacity="1"/>
+<rect x="582.0" y="168" width="276" height="34" rx="17" fill="#a78bfa" opacity=".12"/>
+<text x="720" y="191" font-size="14" font-weight="600" fill="#a78bfa" text-anchor="middle" letter-spacing="0">Now streaming in 12 countries</text>
+<text x="720" y="298" font-size="76" font-weight="600" fill="#f5f5f7" text-anchor="middle" letter-spacing="-2.5">Music that follows</text>
+<text x="720" y="382" font-size="76" font-weight="600" fill="#f5f5f7" text-anchor="middle" letter-spacing="-2.5">your mood.</text>
+<text x="720" y="466" font-size="20" font-weight="400" fill="#8a8a96" text-anchor="middle" letter-spacing="0">A streaming platform with curated radio, live sessions and artist tools.</text>
+<rect x="560" y="506" width="150" height="52" rx="26" fill="#a78bfa" opacity="1"/>
+<text x="635" y="538" font-size="16" font-weight="600" fill="#0b0b10" text-anchor="middle" letter-spacing="0">Start now</text>
+<rect x="730" y="506" width="150" height="52" rx="26" fill="none" stroke="rgba(255,255,255,0.08)" opacity="1"/>
+<text x="805" y="538" font-size="16" font-weight="500" fill="#f5f5f7" text-anchor="middle" letter-spacing="0">Book a demo</text>
+<rect x="120" y="606" width="1200" height="620" rx="20" fill="#15151c" stroke="rgba(255,255,255,0.08)"/>
+<rect x="120" y="606" width="1200" height="620" rx="20" fill="#a78bfa" opacity=".03"/>
+<clipPath id="appclip"><rect x="120" y="606" width="1200" height="620" rx="20"/></clipPath><g clip-path="url(#appclip)">
+<rect x="120" y="606" width="220" height="620" rx="20" fill="#1c1c25" opacity=".7"/>
+<rect x="144" y="634" width="24" height="24" rx="7" fill="#a78bfa" opacity="1"/>
+<rect x="178" y="640" width="90" height="12" rx="6" fill="#f5f5f7" opacity="0.7"/>
+<rect x="148" y="702" width="14" height="14" rx="4" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="174" y="703" width="107" height="11" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="132" y="734" width="196" height="40" rx="10" fill="#a78bfa" opacity=".14"/>
+<rect x="148" y="748" width="14" height="14" rx="4" fill="#a78bfa" opacity="1"/>
+<rect x="174" y="749" width="111" height="11" rx="5" fill="#f5f5f7" opacity="0.8"/>
+<rect x="148" y="794" width="14" height="14" rx="4" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="174" y="795" width="105" height="11" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="148" y="840" width="14" height="14" rx="4" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="174" y="841" width="82" height="11" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="148" y="886" width="14" height="14" rx="4" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="174" y="887" width="102" height="11" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="148" y="932" width="14" height="14" rx="4" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="174" y="933" width="101" height="11" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<text x="380" y="666" font-size="26" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="0">Good evening</text>
+<rect x="380" y="702" width="290" height="72" rx="10" fill="#1c1c25"/>
+<rect x="380" y="702" width="72" height="72" rx="10" fill="#7c3aed"/>
+<rect x="468" y="732" width="130" height="12" rx="6" fill="#f5f5f7" opacity="0.7"/>
+<rect x="690" y="702" width="290" height="72" rx="10" fill="#1c1c25"/>
+<rect x="690" y="702" width="72" height="72" rx="10" fill="#db2777"/>
+<rect x="778" y="732" width="130" height="12" rx="6" fill="#f5f5f7" opacity="0.7"/>
+<rect x="1000" y="702" width="290" height="72" rx="10" fill="#1c1c25"/>
+<rect x="1000" y="702" width="72" height="72" rx="10" fill="#0ea5e9"/>
+<rect x="1088" y="732" width="130" height="12" rx="6" fill="#f5f5f7" opacity="0.7"/>
+<rect x="380" y="794" width="290" height="72" rx="10" fill="#1c1c25"/>
+<rect x="380" y="794" width="72" height="72" rx="10" fill="#f59e0b"/>
+<rect x="468" y="824" width="130" height="12" rx="6" fill="#f5f5f7" opacity="0.7"/>
+<rect x="690" y="794" width="290" height="72" rx="10" fill="#1c1c25"/>
+<rect x="690" y="794" width="72" height="72" rx="10" fill="#10b981"/>
+<rect x="778" y="824" width="130" height="12" rx="6" fill="#f5f5f7" opacity="0.7"/>
+<rect x="1000" y="794" width="290" height="72" rx="10" fill="#1c1c25"/>
+<rect x="1000" y="794" width="72" height="72" rx="10" fill="#6366f1"/>
+<rect x="1088" y="824" width="130" height="12" rx="6" fill="#f5f5f7" opacity="0.7"/>
+<text x="380" y="924" font-size="20" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="0">Made for you</text>
+<rect x="380" y="944" width="168" height="168" rx="12" fill="#0ea5e9" opacity=".85"/>
+<rect x="380" y="1126" width="120" height="11" rx="5" fill="#f5f5f7" opacity="0.7"/>
+<rect x="564" y="944" width="168" height="168" rx="12" fill="#f59e0b" opacity=".85"/>
+<rect x="564" y="1126" width="120" height="11" rx="5" fill="#f5f5f7" opacity="0.7"/>
+<rect x="748" y="944" width="168" height="168" rx="12" fill="#10b981" opacity=".85"/>
+<rect x="748" y="1126" width="120" height="11" rx="5" fill="#f5f5f7" opacity="0.7"/>
+<rect x="932" y="944" width="168" height="168" rx="12" fill="#6366f1" opacity=".85"/>
+<rect x="932" y="1126" width="120" height="11" rx="5" fill="#f5f5f7" opacity="0.7"/>
+<rect x="1116" y="944" width="168" height="168" rx="12" fill="#7c3aed" opacity=".85"/>
+<rect x="1116" y="1126" width="120" height="11" rx="5" fill="#f5f5f7" opacity="0.7"/>
+<rect x="120" y="1150" width="1200" height="76" rx="0" fill="#1c1c25"/>
+<circle cx="720.0" cy="1188" r="18" fill="#f5f5f7"/>
+<rect x="520.0" y="1214" width="400" height="4" rx="2" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="520.0" y="1214" width="150" height="4" rx="2" fill="#a78bfa" opacity="1"/>
+</g>
+<text x="720" y="1346" font-size="14" font-weight="400" fill="#8a8a96" text-anchor="middle" letter-spacing="1.5">Trusted by teams at</text>
+<rect x="170" y="1382" width="140" height="30" rx="8" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="360" y="1382" width="140" height="30" rx="8" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="550" y="1382" width="140" height="30" rx="8" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="740" y="1382" width="140" height="30" rx="8" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="930" y="1382" width="140" height="30" rx="8" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="1120" y="1382" width="140" height="30" rx="8" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<text x="120" y="1536" font-size="48" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="-1.5">Built for listeners and artists</text>
+<rect x="120" y="1576" width="520" height="14" rx="7.0" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="120" y="1602" width="236.24059194985998" height="14" rx="7.0" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="120" y="1666" width="384" height="300" rx="18" fill="#15151c" stroke="rgba(255,255,255,0.08)"/>
+<rect x="152" y="1698" width="48" height="48" rx="12" fill="#a78bfa" opacity=".16"/>
+<rect x="168" y="1714" width="16" height="16" rx="4" fill="#a78bfa" opacity="1"/>
+<text x="152" y="1796" font-size="22" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="0">Smart playlists</text>
+<rect x="152" y="1826" width="300" height="11" rx="5.5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="152" y="1848" width="300" height="11" rx="5.5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="152" y="1870" width="164.3797805862986" height="11" rx="5.5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="528" y="1666" width="384" height="300" rx="18" fill="#15151c" stroke="rgba(255,255,255,0.08)"/>
+<rect x="560" y="1698" width="48" height="48" rx="12" fill="#a78bfa" opacity=".16"/>
+<rect x="576" y="1714" width="16" height="16" rx="4" fill="#a78bfa" opacity="1"/>
+<text x="560" y="1796" font-size="22" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="0">Live sessions</text>
+<rect x="560" y="1826" width="300" height="11" rx="5.5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="560" y="1848" width="300" height="11" rx="5.5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="560" y="1870" width="152.71009353299863" height="11" rx="5.5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="936" y="1666" width="384" height="300" rx="18" fill="#15151c" stroke="rgba(255,255,255,0.08)"/>
+<rect x="968" y="1698" width="48" height="48" rx="12" fill="#a78bfa" opacity=".16"/>
+<rect x="984" y="1714" width="16" height="16" rx="4" fill="#a78bfa" opacity="1"/>
+<text x="968" y="1796" font-size="22" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="0">Artist studio</text>
+<rect x="968" y="1826" width="300" height="11" rx="5.5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="968" y="1848" width="300" height="11" rx="5.5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="968" y="1870" width="188.00846629671878" height="11" rx="5.5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<line x1="120" y1="2056" x2="1320" y2="2056" stroke="rgba(255,255,255,0.08)"/>
+<text x="120" y="2166" font-size="56" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="-2">2.4M</text>
+<text x="120" y="2202" font-size="16" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">Monthly listeners</text>
+<text x="420" y="2166" font-size="56" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="-2">180K</text>
+<text x="420" y="2202" font-size="16" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">Tracks</text>
+<text x="720" y="2166" font-size="56" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="-2">12</text>
+<text x="720" y="2202" font-size="16" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">Countries</text>
+<text x="1020" y="2166" font-size="56" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="-2">4.9</text>
+<text x="1020" y="2202" font-size="16" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">App rating</text>
+<line x1="120" y1="2266" x2="1320" y2="2266" stroke="rgba(255,255,255,0.08)"/>
+<rect x="120" y="2356" width="1200" height="360" rx="28" fill="#a78bfa"/>
+<rect x="120" y="2356" width="1200" height="360" rx="28" fill="url(#shine)"/>
+<text x="720" y="2506" font-size="52" font-weight="600" fill="#0b0b10" text-anchor="middle" letter-spacing="-1.5">Press play on your platform.</text>
+<text x="720" y="2552" font-size="19" font-weight="400" fill="#0b0b10" text-anchor="middle" letter-spacing="0">Custom-built for the way your team works.</text>
+<rect x="630" y="2592" width="180" height="54" rx="27" fill="#0b0b10"/>
+<text x="720" y="2626" font-size="16" font-weight="600" fill="#a78bfa" text-anchor="middle" letter-spacing="0">Talk to us</text>
+<line x1="0" y1="2816" x2="1440" y2="2816" stroke="rgba(255,255,255,0.08)"/>
+<rect x="120" y="2876" width="28" height="28" rx="8" fill="#a78bfa" opacity="1"/>
+<text x="160" y="2898" font-size="18" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="0">Lavely</text>
+<rect x="120" y="2936" width="260" height="10" rx="5.0" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="120" y="2956" width="157.84275164481832" height="10" rx="5.0" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="620" y="2880" width="70" height="12" rx="6" fill="#f5f5f7" opacity="0.55"/>
+<rect x="620" y="2916" width="110" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="620" y="2946" width="100" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="620" y="2976" width="102" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="620" y="3006" width="91" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="800" y="2880" width="70" height="12" rx="6" fill="#f5f5f7" opacity="0.55"/>
+<rect x="800" y="2916" width="109" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="800" y="2946" width="112" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="800" y="2976" width="114" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="800" y="3006" width="75" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="980" y="2880" width="70" height="12" rx="6" fill="#f5f5f7" opacity="0.55"/>
+<rect x="980" y="2916" width="116" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="980" y="2946" width="80" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="980" y="2976" width="88" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="980" y="3006" width="87" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="1160" y="2880" width="70" height="12" rx="6" fill="#f5f5f7" opacity="0.55"/>
+<rect x="1160" y="2916" width="79" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="1160" y="2946" width="73" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="1160" y="2976" width="93" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<rect x="1160" y="3006" width="110" height="10" rx="5" fill="rgba(255,255,255,0.10)" opacity="1"/>
+<line x1="120" y1="3120" x2="1320" y2="3120" stroke="rgba(255,255,255,0.08)"/>
+<text x="120" y="3160" font-size="14" font-weight="400" fill="#8a8a96" text-anchor="start" letter-spacing="0">© 2026 Lavely</text>
+<text x="1320" y="3160" font-size="13" font-weight="400" fill="#8a8a96" text-anchor="end" letter-spacing="0">Placeholder · 1440 × 3200 — reemplazar</text>
+</svg>

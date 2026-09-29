@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 3200" width="1440" height="3200" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<defs><linearGradient id="shine" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".18"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<radialGradient id="glow" cx=".5" cy="0" r=".6"><stop offset="0" stop-color="#f97316" stop-opacity=".22"/><stop offset="1" stop-color="#f97316" stop-opacity="0"/></radialGradient></defs>
+<rect width="1440" height="3200" fill="#f6f6f3"/>
+<rect width="1440" height="1100" fill="url(#glow)"/>
+<rect x="120" y="30" width="28" height="28" rx="8" fill="#f97316" opacity="1"/>
+<text x="160" y="52" font-size="20" font-weight="600" fill="#111114" text-anchor="start" letter-spacing="0">Formindo</text>
+<text x="560" y="51" font-size="16" font-weight="400" fill="#6b6b75" text-anchor="start" letter-spacing="0">Product</text>
+<text x="678" y="51" font-size="16" font-weight="400" fill="#6b6b75" text-anchor="start" letter-spacing="0">Solutions</text>
+<text x="796" y="51" font-size="16" font-weight="400" fill="#6b6b75" text-anchor="start" letter-spacing="0">Pricing</text>
+<text x="914" y="51" font-size="16" font-weight="400" fill="#6b6b75" text-anchor="start" letter-spacing="0">Company</text>
+<rect x="1170" y="24" width="150" height="42" rx="21" fill="#f97316" opacity="1"/>
+<text x="1245" y="51" font-size="15" font-weight="600" fill="#fff" text-anchor="middle" letter-spacing="0">Get started</text>
+<line x1="0" y1="88" x2="1440" y2="88" stroke="rgba(0,0,0,0.08)"/>
+<rect x="602.0" y="168" width="236" height="34" rx="17" fill="none" stroke="#f97316" opacity="1"/>
+<rect x="602.0" y="168" width="236" height="34" rx="17" fill="#f97316" opacity=".12"/>
+<text x="720" y="191" font-size="14" font-weight="600" fill="#f97316" text-anchor="middle" letter-spacing="0">No-code workflow builder</text>
+<text x="720" y="298" font-size="76" font-weight="600" fill="#111114" text-anchor="middle" letter-spacing="-2.5">Forms that build</text>
+<text x="720" y="382" font-size="76" font-weight="600" fill="#111114" text-anchor="middle" letter-spacing="-2.5">workflows.</text>
+<text x="720" y="466" font-size="20" font-weight="400" fill="#6b6b75" text-anchor="middle" letter-spacing="0">Design forms, route approvals and sync data without writing code.</text>
+<rect x="560" y="506" width="150" height="52" rx="26" fill="#f97316" opacity="1"/>
+<text x="635" y="538" font-size="16" font-weight="600" fill="#fff" text-anchor="middle" letter-spacing="0">Start now</text>
+<rect x="730" y="506" width="150" height="52" rx="26" fill="none" stroke="rgba(0,0,0,0.08)" opacity="1"/>
+<text x="805" y="538" font-size="16" font-weight="500" fill="#111114" text-anchor="middle" letter-spacing="0">Book a demo</text>
+<rect x="120" y="606" width="1200" height="620" rx="20" fill="#ffffff" stroke="rgba(0,0,0,0.08)"/>
+<rect x="120" y="606" width="1200" height="620" rx="20" fill="#f97316" opacity=".03"/>
+<clipPath id="appclip"><rect x="120" y="606" width="1200" height="620" rx="20"/></clipPath><g clip-path="url(#appclip)">
+<rect x="120" y="606" width="240" height="620" rx="20" fill="#efefeb" opacity=".7"/>
+<text x="144" y="654" font-size="16" font-weight="600" fill="#111114" text-anchor="start" letter-spacing="0">Fields</text>
+<rect x="140" y="678" width="200" height="44" rx="10" fill="#f6f6f3" stroke="rgba(0,0,0,0.08)"/>
+<rect x="154" y="693" width="14" height="14" rx="4" fill="#f97316" opacity="0.8"/>
+<text x="180" y="705" font-size="14" font-weight="400" fill="#111114" text-anchor="start" letter-spacing="0">Short text</text>
+<rect x="140" y="736" width="200" height="44" rx="10" fill="#f6f6f3" stroke="rgba(0,0,0,0.08)"/>
+<rect x="154" y="751" width="14" height="14" rx="4" fill="#f97316" opacity="0.8"/>
+<text x="180" y="763" font-size="14" font-weight="400" fill="#111114" text-anchor="start" letter-spacing="0">Email</text>
+<rect x="140" y="794" width="200" height="44" rx="10" fill="#f6f6f3" stroke="rgba(0,0,0,0.08)"/>
+<rect x="154" y="809" width="14" height="14" rx="4" fill="#f97316" opacity="0.8"/>
+<text x="180" y="821" font-size="14" font-weight="400" fill="#111114" text-anchor="start" letter-spacing="0">Dropdown</text>
+<rect x="140" y="852" width="200" height="44" rx="10" fill="#f6f6f3" stroke="rgba(0,0,0,0.08)"/>
+<rect x="154" y="867" width="14" height="14" rx="4" fill="#f97316" opacity="0.8"/>
+<text x="180" y="879" font-size="14" font-weight="400" fill="#111114" text-anchor="start" letter-spacing="0">Date</text>
+<rect x="140" y="910" width="200" height="44" rx="10" fill="#f6f6f3" stroke="rgba(0,0,0,0.08)"/>
+<rect x="154" y="925" width="14" height="14" rx="4" fill="#f97316" opacity="0.8"/>
+<text x="180" y="937" font-size="14" font-weight="400" fill="#111114" text-anchor="start" letter-spacing="0">File upload</text>
+<rect x="140" y="968" width="200" height="44" rx="10" fill="#f6f6f3" stroke="rgba(0,0,0,0.08)"/>
+<rect x="154" y="983" width="14" height="14" rx="4" fill="#f97316" opacity="0.8"/>
+<text x="180" y="995" font-size="14" font-weight="400" fill="#111114" text-anchor="start" letter-spacing="0">Signature</text>
+<rect x="140" y="1026" width="200" height="44" rx="10" fill="#f6f6f3" stroke="rgba(0,0,0,0.08)"/>
+<rect x="154" y="1041" width="14" height="14" rx="4" fill="#f97316" opacity="0.8"/>
+<text x="180" y="1053" font-size="14" font-weight="400" fill="#111114" text-anchor="start" letter-spacing="0">Approval</text>
+<rect x="420" y="646" width="560" height="540" rx="16" fill="#f6f6f3" stroke="rgba(0,0,0,0.08)"/>
+<text x="460" y="706" font-size="26" font-weight="600" fill="#111114" text-anchor="start" letter-spacing="0">Supplier onboarding</text>
+<rect x="460" y="746" width="110" height="10" rx="5" fill="#6b6b75" opacity="0.6"/>
+<rect x="460" y="766" width="480" height="44" rx="10" fill="none" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+<rect x="460" y="828" width="110" height="10" rx="5" fill="#6b6b75" opacity="0.6"/>
+<rect x="460" y="848" width="480" height="44" rx="10" fill="none" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+<rect x="460" y="910" width="110" height="10" rx="5" fill="#6b6b75" opacity="0.6"/>
+<rect x="460" y="930" width="480" height="44" rx="10" fill="none" stroke="#f97316" stroke-width="2"/>
+<rect x="460" y="992" width="110" height="10" rx="5" fill="#6b6b75" opacity="0.6"/>
+<rect x="460" y="1012" width="480" height="44" rx="10" fill="none" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+<rect x="460" y="1074" width="110" height="10" rx="5" fill="#6b6b75" opacity="0.6"/>
+<rect x="460" y="1094" width="480" height="44" rx="10" fill="none" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+<rect x="460" y="1110" width="140" height="44" rx="22" fill="#f97316" opacity="1"/>
+<text x="1020" y="676" font-size="16" font-weight="600" fill="#111114" text-anchor="start" letter-spacing="0">Workflow</text>
+<rect x="1020" y="706" width="260" height="76" rx="12" fill="#efefeb" stroke="rgba(0,0,0,0.08)"/>
+<rect x="1040" y="728" width="140" height="11" rx="5" fill="#111114" opacity="0.7"/>
+<rect x="1040" y="750" width="90" height="9" rx="4" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<line x1="1150" y1="782" x2="1150" y2="824" stroke="#f97316" stroke-width="2" stroke-dasharray="4 4"/>
+<rect x="1020" y="824" width="260" height="76" rx="12" fill="#efefeb" stroke="#f97316"/>
+<rect x="1040" y="846" width="140" height="11" rx="5" fill="#111114" opacity="0.7"/>
+<rect x="1040" y="868" width="90" height="9" rx="4" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<line x1="1150" y1="900" x2="1150" y2="942" stroke="#f97316" stroke-width="2" stroke-dasharray="4 4"/>
+<rect x="1020" y="942" width="260" height="76" rx="12" fill="#efefeb" stroke="rgba(0,0,0,0.08)"/>
+<rect x="1040" y="964" width="140" height="11" rx="5" fill="#111114" opacity="0.7"/>
+<rect x="1040" y="986" width="90" height="9" rx="4" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<line x1="1150" y1="1018" x2="1150" y2="1060" stroke="#f97316" stroke-width="2" stroke-dasharray="4 4"/>
+<rect x="1020" y="1060" width="260" height="76" rx="12" fill="#efefeb" stroke="rgba(0,0,0,0.08)"/>
+<rect x="1040" y="1082" width="140" height="11" rx="5" fill="#111114" opacity="0.7"/>
+<rect x="1040" y="1104" width="90" height="9" rx="4" fill="rgba(0,0,0,0.09)" opacity="1"/>
+</g>
+<text x="720" y="1346" font-size="14" font-weight="400" fill="#6b6b75" text-anchor="middle" letter-spacing="1.5">Trusted by teams at</text>
+<rect x="170" y="1382" width="140" height="30" rx="8" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="360" y="1382" width="140" height="30" rx="8" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="550" y="1382" width="140" height="30" rx="8" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="740" y="1382" width="140" height="30" rx="8" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="930" y="1382" width="140" height="30" rx="8" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="1120" y="1382" width="140" height="30" rx="8" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<text x="120" y="1536" font-size="48" font-weight="600" fill="#111114" text-anchor="start" letter-spacing="-1.5">From form to process</text>
+<rect x="120" y="1576" width="520" height="14" rx="7.0" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="120" y="1602" width="281.2809702466129" height="14" rx="7.0" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="120" y="1666" width="384" height="300" rx="18" fill="#ffffff" stroke="rgba(0,0,0,0.08)"/>
+<rect x="152" y="1698" width="48" height="48" rx="12" fill="#f97316" opacity=".16"/>
+<rect x="168" y="1714" width="16" height="16" rx="4" fill="#f97316" opacity="1"/>
+<text x="152" y="1796" font-size="22" font-weight="600" fill="#111114" text-anchor="start" letter-spacing="0">Drag &amp; drop builder</text>
+<rect x="152" y="1826" width="300" height="11" rx="5.5" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="152" y="1848" width="300" height="11" rx="5.5" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="152" y="1870" width="146.92624576258217" height="11" rx="5.5" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="528" y="1666" width="384" height="300" rx="18" fill="#ffffff" stroke="rgba(0,0,0,0.08)"/>
+<rect x="560" y="1698" width="48" height="48" rx="12" fill="#f97316" opacity=".16"/>
+<rect x="576" y="1714" width="16" height="16" rx="4" fill="#f97316" opacity="1"/>
+<text x="560" y="1796" font-size="22" font-weight="600" fill="#111114" text-anchor="start" letter-spacing="0">Approval routing</text>
+<rect x="560" y="1826" width="300" height="11" rx="5.5" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="560" y="1848" width="300" height="11" rx="5.5" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="560" y="1870" width="178.96117915657928" height="11" rx="5.5" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="936" y="1666" width="384" height="300" rx="18" fill="#ffffff" stroke="rgba(0,0,0,0.08)"/>
+<rect x="968" y="1698" width="48" height="48" rx="12" fill="#f97316" opacity=".16"/>
+<rect x="984" y="1714" width="16" height="16" rx="4" fill="#f97316" opacity="1"/>
+<text x="968" y="1796" font-size="22" font-weight="600" fill="#111114" text-anchor="start" letter-spacing="0">API sync</text>
+<rect x="968" y="1826" width="300" height="11" rx="5.5" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="968" y="1848" width="300" height="11" rx="5.5" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="968" y="1870" width="196.470341663774" height="11" rx="5.5" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<line x1="120" y1="2056" x2="1320" y2="2056" stroke="rgba(0,0,0,0.08)"/>
+<text x="120" y="2166" font-size="56" font-weight="600" fill="#111114" text-anchor="start" letter-spacing="-2">12K</text>
+<text x="120" y="2202" font-size="16" font-weight="400" fill="#6b6b75" text-anchor="start" letter-spacing="0">Forms created</text>
+<text x="420" y="2166" font-size="56" font-weight="600" fill="#111114" text-anchor="start" letter-spacing="-2">65%</text>
+<text x="420" y="2202" font-size="16" font-weight="400" fill="#6b6b75" text-anchor="start" letter-spacing="0">Less paperwork</text>
+<text x="720" y="2166" font-size="56" font-weight="600" fill="#111114" text-anchor="start" letter-spacing="-2">40+</text>
+<text x="720" y="2202" font-size="16" font-weight="400" fill="#6b6b75" text-anchor="start" letter-spacing="0">Integrations</text>
+<text x="1020" y="2166" font-size="56" font-weight="600" fill="#111114" text-anchor="start" letter-spacing="-2">99.9%</text>
+<text x="1020" y="2202" font-size="16" font-weight="400" fill="#6b6b75" text-anchor="start" letter-spacing="0">Uptime</text>
+<line x1="120" y1="2266" x2="1320" y2="2266" stroke="rgba(0,0,0,0.08)"/>
+<rect x="120" y="2356" width="1200" height="360" rx="28" fill="#f97316"/>
+<rect x="120" y="2356" width="1200" height="360" rx="28" fill="url(#shine)"/>
+<text x="720" y="2506" font-size="52" font-weight="600" fill="#ffffff" text-anchor="middle" letter-spacing="-1.5">Turn paperwork into workflows.</text>
+<text x="720" y="2552" font-size="19" font-weight="400" fill="#ffffff" text-anchor="middle" letter-spacing="0">Custom-built for the way your team works.</text>
+<rect x="630" y="2592" width="180" height="54" rx="27" fill="#ffffff"/>
+<text x="720" y="2626" font-size="16" font-weight="600" fill="#f97316" text-anchor="middle" letter-spacing="0">Talk to us</text>
+<line x1="0" y1="2816" x2="1440" y2="2816" stroke="rgba(0,0,0,0.08)"/>
+<rect x="120" y="2876" width="28" height="28" rx="8" fill="#f97316" opacity="1"/>
+<text x="160" y="2898" font-size="18" font-weight="600" fill="#111114" text-anchor="start" letter-spacing="0">Formindo</text>
+<rect x="120" y="2936" width="260" height="10" rx="5.0" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="120" y="2956" width="158.56256323804396" height="10" rx="5.0" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="620" y="2880" width="70" height="12" rx="6" fill="#111114" opacity="0.55"/>
+<rect x="620" y="2916" width="98" height="10" rx="5" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="620" y="2946" width="119" height="10" rx="5" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="620" y="2976" width="75" height="10" rx="5" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="620" y="3006" width="104" height="10" rx="5" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="800" y="2880" width="70" height="12" rx="6" fill="#111114" opacity="0.55"/>
+<rect x="800" y="2916" width="78" height="10" rx="5" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="800" y="2946" width="95" height="10" rx="5" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="800" y="2976" width="85" height="10" rx="5" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="800" y="3006" width="72" height="10" rx="5" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="980" y="2880" width="70" height="12" rx="6" fill="#111114" opacity="0.55"/>
+<rect x="980" y="2916" width="113" height="10" rx="5" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="980" y="2946" width="109" height="10" rx="5" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="980" y="2976" width="97" height="10" rx="5" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="980" y="3006" width="76" height="10" rx="5" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="1160" y="2880" width="70" height="12" rx="6" fill="#111114" opacity="0.55"/>
+<rect x="1160" y="2916" width="85" height="10" rx="5" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="1160" y="2946" width="105" height="10" rx="5" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="1160" y="2976" width="92" height="10" rx="5" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<rect x="1160" y="3006" width="75" height="10" rx="5" fill="rgba(0,0,0,0.09)" opacity="1"/>
+<line x1="120" y1="3120" x2="1320" y2="3120" stroke="rgba(0,0,0,0.08)"/>
+<text x="120" y="3160" font-size="14" font-weight="400" fill="#6b6b75" text-anchor="start" letter-spacing="0">© 2026 Formindo</text>
+<text x="1320" y="3160" font-size="13" font-weight="400" fill="#6b6b75" text-anchor="end" letter-spacing="0">Placeholder · 1440 × 3200 — reemplazar</text>
+</svg>
