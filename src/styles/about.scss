@@ -1,0 +1,259 @@
+/* ============================================================
+   ABOUT · túnel
+   Sin JavaScript, sin WebGL o con movimiento reducido se ve como
+   una página normal con las paradas una debajo de otra. Con la
+   clase .tunnel-js en <html> se convierte en el túnel inmersivo.
+   ============================================================ */
+
+$pad: clamp(1.25rem, 5vw, 5rem);
+
+body.page-about { background-color: #070708; }
+
+/* ---------- Versión estática (por defecto) ---------- */
+
+.tunnel {
+  position: relative;
+  z-index: 10;
+  padding: clamp(7rem, 16vh, 10rem) $pad clamp(4rem, 10vh, 7rem);
+  background-color: var(--ink);
+  color: var(--white);
+}
+
+.tunnel__stage {
+  max-width: 1280px;
+  margin-inline: auto;
+  display: grid;
+  gap: clamp(3.5rem, 9vh, 6rem);
+}
+
+.tunnel__canvas,
+.tunnel__vignette,
+.tunnel__hud { display: none; }
+
+.tunnel__station {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tunnel__hero {
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(3.2rem, 10vw, 9.5rem);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+  color: var(--cream);
+}
+
+.tunnel__title {
+  font-size: clamp(2.4rem, 6.6vw, 6.2rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #f1ede6;
+
+  sup {
+    margin-left: 0.35em;
+    font-size: 0.2em;
+    letter-spacing: 0.02em;
+    vertical-align: top;
+    position: relative;
+    top: 0.4em;
+    color: var(--muted);
+  }
+}
+
+.tunnel__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.4rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sand);
+
+  &::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgb(var(--amber));
+    box-shadow: 0 0 12px rgba(var(--amber), 0.9);
+  }
+}
+
+.tunnel__kicker {
+  margin-top: 1.8rem;
+  max-width: 48ch;
+  font-size: 0.8rem;
+  line-height: 1.85;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(232, 228, 219, 0.72);
+}
+
+.tunnel__actions {
+  margin-top: 2.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+
+/* ---------- Túnel inmersivo ---------- */
+
+.tunnel-js {
+  .tunnel {
+    height: 1100vh;
+    padding: 0;
+    background-color: #070708;
+  }
+
+  .tunnel__stage {
+    position: sticky;
+    top: 0;
+    max-width: none;
+    height: 100vh;
+    height: 100svh;
+    display: block;
+    overflow: hidden;
+  }
+
+  .tunnel__canvas {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Oscurece bordes y extremos para que el texto y la navbar se lean */
+  .tunnel__vignette {
+    display: block;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(to bottom, rgba(7, 7, 8, 0.85), transparent 22%, transparent 78%, rgba(7, 7, 8, 0.7)),
+      radial-gradient(120% 90% at 50% 50%, transparent 55%, rgba(7, 7, 8, 0.75));
+  }
+
+  .tunnel__station {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    padding: 0 $pad;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    will-change: opacity, transform, filter;
+
+    &.is-on { pointer-events: auto; }
+
+    .tunnel__title,
+    .tunnel__hero { text-shadow: 0 0 40px rgba(var(--glow), 0.25); }
+    .tunnel__kicker { margin-inline: auto; }
+    .tunnel__actions { justify-content: center; }
+  }
+
+  .tunnel__station--left {
+    align-items: flex-start;
+    padding-left: clamp(1.25rem, 9vw, 9rem);
+    text-align: left;
+    .tunnel__kicker { margin-inline: 0; }
+  }
+
+  .tunnel__station--right {
+    align-items: flex-end;
+    padding-right: clamp(1.25rem, 9vw, 9rem);
+    text-align: right;
+    .tunnel__kicker { margin-inline: 0; }
+  }
+
+  /* Intro: "We are" arriba a la izquierda, "Quinvora Code" abajo a la derecha */
+  .tunnel__station--intro {
+    opacity: 1;
+    visibility: visible;
+
+    .tunnel__hero { position: static; }
+
+    .tunnel__hero-top,
+    .tunnel__hero-bottom { position: absolute; }
+
+    .tunnel__hero-top {
+      top: clamp(5.5rem, 14vh, 8rem);
+      left: $pad;
+    }
+
+    .tunnel__hero-bottom {
+      bottom: clamp(4.5rem, 11vh, 6.5rem);
+      right: $pad;
+    }
+
+    .tunnel__kicker { margin-top: 0; max-width: 52ch; }
+  }
+
+  .tunnel__hud {
+    position: absolute;
+    left: $pad;
+    right: $pad;
+    bottom: 1.4rem;
+    z-index: 3;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.5rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    pointer-events: none;
+  }
+
+  .tunnel__status,
+  .tunnel__pct { min-width: 9rem; white-space: nowrap; }
+  .tunnel__pct { text-align: right; font-variant-numeric: tabular-nums; }
+
+  .tunnel__rail {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    height: 24px;
+
+    i {
+      width: 1px;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.18);
+      transition: height 0.4s var(--ease-out), background-color 0.4s ease;
+
+      &.on {
+        height: 20px;
+        background: var(--cream);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .tunnel-js {
+    .tunnel { height: 900vh; }
+
+    .tunnel__station--left,
+    .tunnel__station--right {
+      align-items: center;
+      padding-inline: $pad;
+      text-align: center;
+      .tunnel__kicker { margin-inline: auto; }
+    }
+
+    .tunnel__kicker { font-size: 0.72rem; }
+    .tunnel__status,
+    .tunnel__pct { min-width: 0; }
+    .tunnel__rail { gap: 5px; }
+  }
+}

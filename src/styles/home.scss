@@ -267,20 +267,40 @@ $max: 1280px;
 
   &--wide { grid-column: span 3; min-height: 520px; }
 
-  &--cta {
-    justify-content: space-between;
-    padding: 1.6rem;
-
-    h3 { font-size: 2.1rem; font-weight: 400; letter-spacing: -0.03em; line-height: 1.1; max-width: 11ch; }
-    p { margin-top: 1rem; color: var(--muted); line-height: 1.6; max-width: 26ch; }
-  }
 }
 
-.bento__actions {
-  display: grid;
-  gap: 0.7rem;
+/* Franja final: enlace a la página About */
+.bento__more {
+  grid-column: span 6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 2.2rem;
+  border-radius: 22px;
+  @include glass;
+  background-color: #0b0b0c;
+  background-image:
+    radial-gradient(40% 120% at 0% 50%, rgba(var(--amber), 0.12), transparent 70%),
+    radial-gradient(40% 120% at 100% 50%, rgba(var(--azure), 0.1), transparent 70%);
 
-  a { width: 100%; }
+  h3 {
+    margin-top: 0.7rem;
+    max-width: 30ch;
+    font-size: clamp(1.4rem, 2.4vw, 2rem);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+  }
+
+  .btn-glow { flex: none; }
+}
+
+.bento__more-eyebrow {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
 
 .bento__visual {
@@ -382,88 +402,6 @@ $max: 1280px;
   0%   { opacity: 0; transform: rotate(var(--a)) translateX(40px) scaleX(0.2); }
   20%  { opacity: 1; }
   100% { opacity: 0; transform: rotate(var(--a)) translateX(230px) scaleX(1); }
-}
-
-/* Control: deslizadores con perilla luminosa */
-.vis-sliders {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2.4rem;
-  background: radial-gradient(38% 50% at 32% 50%, rgba(var(--amber), 0.16), transparent 70%), radial-gradient(38% 50% at 70% 45%, rgba(var(--azure), 0.14), transparent 70%);
-
-  span {
-    position: relative;
-    width: 34px;
-    height: 200px;
-    border-radius: 999px;
-    border: 1px solid var(--line-strong);
-    background: rgba(255, 255, 255, 0.03);
-  }
-
-  i {
-    position: absolute;
-    left: 50%;
-    bottom: 12px;
-    width: 4px;
-    height: var(--h);
-    transform: translateX(-50%);
-    border-radius: 4px;
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.95), rgba(var(--glow), 0.5));
-    animation: sliderFill var(--d) ease-in-out infinite;
-  }
-
-  b {
-    position: absolute;
-    left: 50%;
-    bottom: calc(var(--h) + 2px);
-    width: 22px;
-    height: 22px;
-    transform: translate(-50%, 50%);
-    border-radius: 50%;
-    background: radial-gradient(circle at 35% 30%, #fff, #efe6d6 45%, #b9ab94);
-    box-shadow: 0 0 18px rgba(255, 250, 240, 0.85), 0 0 40px rgba(var(--glow), 0.45);
-    animation: sliderKnob var(--d) ease-in-out infinite;
-  }
-}
-
-.vis-sliders span:nth-child(1) b { box-shadow: 0 0 18px rgba(255, 250, 240, 0.85), 0 0 40px rgba(var(--amber), 0.7); }
-.vis-sliders span:nth-child(2) b { box-shadow: 0 0 18px rgba(255, 250, 240, 0.85), 0 0 40px rgba(var(--azure), 0.7); }
-
-@keyframes sliderFill { 0%, 100% { height: var(--h); } 50% { height: calc(var(--h) * 0.45); } }
-@keyframes sliderKnob { 0%, 100% { bottom: calc(var(--h) + 2px); } 50% { bottom: calc(var(--h) * 0.45 + 2px); } }
-
-/* Flexibilidad: filas de integraciones en movimiento */
-.vis-tiles {
-  align-content: center;
-  gap: 1rem;
-  overflow: hidden;
-  background: radial-gradient(38% 50% at 32% 50%, rgba(var(--amber), 0.16), transparent 70%), radial-gradient(38% 50% at 70% 45%, rgba(var(--azure), 0.14), transparent 70%);
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
-  mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
-
-  &__row {
-    display: flex;
-    gap: 1rem;
-    width: max-content;
-    animation: marquee 22s linear infinite;
-
-    &--rev { animation-direction: reverse; animation-duration: 26s; }
-  }
-
-  span {
-    display: grid;
-    place-items: center;
-    width: 66px;
-    height: 66px;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    background: linear-gradient(160deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02));
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
-    color: #fff;
-
-    .ico { width: 26px; height: 26px; }
-  }
 }
 
 
@@ -1463,7 +1401,7 @@ $max: 1280px;
   .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .bento__card,
   .bento__card--wide { grid-column: span 1; min-height: 440px; }
-  .bento__card--cta { grid-column: span 2; min-height: 0; gap: 2rem; }
+  .bento__more { grid-column: span 2; }
 
   .services__layout { grid-template-columns: 1fr; }
   .services__tabs {
@@ -1501,8 +1439,8 @@ $max: 1280px;
 
   .bento { grid-template-columns: 1fr; }
   .bento__card,
-  .bento__card--wide,
-  .bento__card--cta { grid-column: span 1; }
+  .bento__card--wide { grid-column: span 1; }
+  .bento__more { grid-column: span 1; flex-direction: column; align-items: flex-start; padding: 1.6rem; }
 
   .services__tab .ico { display: none; }
   .svc-card__text { padding: 1.5rem; }
@@ -1533,11 +1471,8 @@ $max: 1280px;
 
 @media (prefers-reduced-motion: reduce) {
   .stack-strip__track,
-  .vis-tiles__row,
   .vis-speed__streaks i,
   .vis-circuit__flow path,
-  .vis-sliders i,
-  .vis-sliders b,
   .vis-modules__typing,
   .vis-wire__cursor,
   .orb { animation: none; }
