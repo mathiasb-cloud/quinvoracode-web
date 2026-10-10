@@ -176,3 +176,60 @@ $pad: clamp(1.25rem, 5vw, 5rem);
 @media (prefers-reduced-motion: reduce) {
   .site-foot__word .main { animation: none; }
 }
+
+/* ---------- Datos del comercio y medios de pago ---------- */
+
+.site-foot__libro {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.site-foot__company {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding: 1.6rem $pad;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem 2rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.92rem;
+  color: #8f8b85;
+}
+
+.site-foot__company-data {
+  display: grid;
+  gap: 0.35rem;
+
+  strong { color: #f3f0ea; font-weight: 500; }
+
+  a {
+    color: #cfcac2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover { color: #fff; }
+  }
+}
+
+.site-foot__payments {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.site-foot__payments-title { margin-right: 0.3rem; }
+
+.pay-chip {
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  color: #e8e4db;
+  font-size: 0.82rem;
+}

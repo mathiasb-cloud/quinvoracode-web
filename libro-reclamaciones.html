@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/quinvora.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Libro de Reclamaciones — Quinvora Code</title>
+    <meta name="description" content="Libro de Reclamaciones virtual de Quinvora Code, conforme a la Ley N.° 29571." />
+  </head>
+  <body class="page-legal">
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <defs>
+        <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5zM5 19.5A1.5 1.5 0 0 0 6.5 21H19"/></symbol>
+        <symbol id="i-left" viewBox="0 0 24 24"><path d="M14.5 5.5L8 12l6.5 6.5"/></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+      </defs>
+    </svg>
+    <div id="app">
+      <header class="navbar">
+        <a href="/" class="logo" aria-label="Quinvora Code — Home">QUINVORA CODE</a>
+
+        <nav class="desktop-nav" aria-label="Main">
+          <a href="/#services">Services</a>
+          <a href="/projects.html">Work</a>
+          <a href="/about.html">About</a>
+          <a href="/#faq">FAQ</a>
+        </nav>
+
+        <div class="header-buttons">
+          <a href="#contact" class="btn-glow btn-glow--sm">Contact Us</a>
+          <button class="menu-toggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="mobile-nav-overlay">
+        <nav>
+          <a href="/">Home</a>
+          <a href="/#services">Services</a>
+          <a href="/projects.html">Work</a>
+          <a href="/about.html">About</a>
+          <a href="/#faq">FAQ</a>
+          <a href="#contact" class="mobile-contact">Contact Us</a>
+        </nav>
+      </div>
+
+      <main class="legal">
+        <div class="legal__inner">
+          <a href="/" class="legal__volver"><svg class="ico"><use href="#i-left"/></svg>Volver al inicio</a>
+          <header class="legal__cabecera">
+            <span class="legal__eyebrow"><svg class="ico"><use href="#i-book"/></svg>Libro de Reclamaciones</span>
+            <h1>Libro de Reclamaciones</h1>
+            <p class="legal__intro">Conforme al Código de Protección y Defensa del Consumidor (Ley N.° 29571), ponemos a tu disposición este Libro de Reclamaciones virtual. Te responderemos en un plazo máximo de <strong>15 días hábiles</strong>.</p>
+          </header>
+
+          <div class="legal__proveedor">
+            <dl class="legal__ficha">
+              <div><dt>Titular</dt><dd>BENITES LOPEZ MATHIAS JOAQUIN, que opera bajo el nombre comercial Quinvora Code</dd></div>
+              <div><dt>RUC</dt><dd>10607991419</dd></div>
+              <div><dt>Domicilio</dt><dd data-domicilio>Perú</dd></div>
+              <div><dt>Correo</dt><dd><a href="mailto:soporte@quinvoracode.com">soporte@quinvoracode.com</a></dd></div>
+              <div><dt>Teléfono</dt><dd><a href="tel:+51926600376">+51 926 600 376</a></dd></div>
+            </dl>
+          </div>
+
+          <form class="reclamo" id="formReclamo" novalidate>
+            <fieldset>
+              <legend>1. Tus datos</legend>
+              <div class="reclamo__grid">
+                <label class="reclamo__campo reclamo__campo--ancho">Nombres y apellidos *<input name="nombre" required maxlength="150" autocomplete="name"></label>
+                <label class="reclamo__campo">Tipo de documento *
+                  <select name="tipoDocumento" required>
+                    <option value="DNI">DNI</option>
+                    <option value="CE">Carné de extranjería</option>
+                    <option value="Pasaporte">Pasaporte</option>
+                    <option value="RUC">RUC</option>
+                  </select>
+                </label>
+                <label class="reclamo__campo">Número de documento *<input name="documento" required maxlength="20"></label>
+                <label class="reclamo__campo reclamo__campo--ancho">Domicilio *<input name="domicilio" required maxlength="200" autocomplete="street-address"></label>
+                <label class="reclamo__campo">Teléfono *<input name="telefono" type="tel" required maxlength="20" autocomplete="tel"></label>
+                <label class="reclamo__campo">Correo electrónico *<input name="correo" type="email" required maxlength="120" autocomplete="email"></label>
+                <label class="reclamo__check reclamo__campo--ancho"><input type="checkbox" name="menor" id="reclamoMenor"> Soy menor de edad</label>
+                <label class="reclamo__campo reclamo__campo--ancho" id="reclamoApoderado" hidden>Nombre del padre, madre o apoderado *<input name="apoderado" maxlength="150"></label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>2. Bien o servicio contratado</legend>
+              <div class="reclamo__grid">
+                <label class="reclamo__campo">Tipo *
+                  <select name="tipoBien" required>
+                    <option value="Servicio">Servicio</option>
+                    <option value="Producto">Producto</option>
+                  </select>
+                </label>
+                <label class="reclamo__campo">Monto reclamado (S/)<input name="monto" type="number" min="0" step="0.01" inputmode="decimal"></label>
+                <label class="reclamo__campo reclamo__campo--ancho">Descripción *<input name="descripcionBien" required maxlength="250" placeholder="Ej.: Membresía RestQode plan Avanzado, octubre 2026"></label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>3. Detalle</legend>
+              <div class="reclamo__tipos" role="radiogroup" aria-label="Tipo">
+                <label><input type="radio" name="tipo" value="Reclamo" checked><span><strong>Reclamo</strong>Disconformidad con el producto o servicio.</span></label>
+                <label><input type="radio" name="tipo" value="Queja"><span><strong>Queja</strong>Malestar por la atención, no relacionado con el producto o servicio.</span></label>
+              </div>
+              <div class="reclamo__grid">
+                <label class="reclamo__campo reclamo__campo--ancho">Detalle *<textarea name="detalle" rows="5" required maxlength="2000"></textarea></label>
+                <label class="reclamo__campo reclamo__campo--ancho">Pedido *<textarea name="pedido" rows="3" required maxlength="1000" placeholder="¿Qué solución esperas?"></textarea></label>
+              </div>
+            </fieldset>
+
+            <label class="reclamo__check"><input type="checkbox" name="acepto" required> Declaro que los datos son verdaderos y acepto que se usen para atender este reclamo, según la <a href="/privacidad.html">política de privacidad</a>.</label>
+
+            <p class="reclamo__error" id="reclamoError" hidden></p>
+            <button type="submit" class="btn-glow">Registrar reclamo</button>
+
+            <p class="reclamo__nota">La formulación del reclamo no impide acudir a otras vías de solución de controversias ni es requisito previo para interponer una denuncia ante el INDECOPI.</p>
+          </form>
+
+          <section class="reclamo__constancia" id="reclamoConstancia" hidden aria-live="polite"></section>
+        </div>
+      </main>
+
+      <!-- ==========================================================
+           FOOTER
+           Cambia los href="#" por tu email / redes reales.
+           ========================================================== -->
+      <footer class="site-foot" id="contact">
+        <div class="site-foot__cta">
+          <h2 class="site-foot__title">Step into Quinvora Code —<br>software built around you</h2>
+          <p>Tell us what your business needs. We’ll design, build and run it with you.</p>
+          <a href="mailto:soporte@quinvoracode.com?subject=New%20project" class="btn-glow">Start a project</a>
+        </div>
+
+        <div class="site-foot__mark" aria-hidden="true">
+          <div class="site-foot__glow"></div>
+          <div class="site-foot__word">
+            <span class="ghost">CODE</span><span class="main">QUINVORACODE</span><span class="ghost">QUINVORA</span>
+          </div>
+        </div>
+
+        <div class="site-foot__cols">
+          <div>
+            <h4>Navigation</h4>
+            <a href="/">Home</a>
+            <a href="/projects.html">Work</a>
+            <a href="/#services">Services</a>
+            <a href="/about.html">About</a>
+            <a href="/#faq">FAQ</a>
+          </div>
+          <div>
+            <h4>Services</h4>
+            <a href="/#svc-platforms">Web platforms</a>
+            <a href="/#svc-integrations">Integrations</a>
+            <a href="/#svc-cloud">Cloud &amp; care</a>
+            <a href="/#process">How we work</a>
+          </div>
+          <div>
+            <h4>Legal</h4>
+            <a href="/terminos.html">Terms and conditions</a>
+            <a href="/privacidad.html">Privacy policy</a>
+            <a href="/devoluciones.html">Refunds and cancellations</a>
+            <a href="/libro-reclamaciones.html" class="site-foot__libro"><svg class="ico"><use href="#i-book"/></svg>Libro de Reclamaciones</a>
+            <button type="button" data-cookie-settings>Cookie settings</button>
+          </div>
+          <div>
+            <h4>Social</h4>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">X / Twitter</a>
+            <a href="#">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Datos del comercio: los exigen la pasarela de pagos y el Codigo de Proteccion al Consumidor -->
+        <div class="site-foot__company">
+          <div class="site-foot__company-data">
+            <strong>Quinvora Code</strong>
+            <span>Trade name of BENITES LOPEZ MATHIAS JOAQUIN · RUC 10607991419 · Peru</span>
+            <span>
+              <a href="mailto:soporte@quinvoracode.com">soporte@quinvoracode.com</a> ·
+              <a href="tel:+51926600376">+51 926 600 376</a>
+            </span>
+          </div>
+          <div class="site-foot__payments" aria-label="Accepted payment methods">
+            <span class="site-foot__payments-title">Secure payments with Culqi</span>
+            <span class="pay-chip">Yape</span>
+            <span class="pay-chip">Visa</span>
+            <span class="pay-chip">Mastercard</span>
+            <span class="pay-chip">Bank transfer</span>
+          </div>
+        </div>
+
+        <div class="site-foot__bottom">
+          <span>All rights reserved © 2026 Quinvora Code</span>
+          <span>Designed &amp; built by Quinvora Code</span>
+        </div>
+      </footer>
+    </div>
+
+    <div class="cookie" role="dialog" aria-modal="false" aria-labelledby="cookie-title" aria-describedby="cookie-text" hidden>
+      <div class="cookie__body">
+        <p class="cookie__title" id="cookie-title">We value your privacy</p>
+        <p class="cookie__text" id="cookie-text">We use essential cookies to make this site work and, only if you allow it, analytics cookies to understand how it’s used.</p>
+      </div>
+      <div class="cookie__actions">
+        <button type="button" class="cookie__btn cookie__btn--ghost" data-consent="rejected">Reject</button>
+        <button type="button" class="cookie__btn cookie__btn--solid" data-consent="accepted">Accept</button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/reclamaciones.ts"></script>
+  </body>
+</html>

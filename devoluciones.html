@@ -1,17 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/quinvora.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About — Quinvora Code</title>
-    <meta name="description" content="Quinvora Code is a custom software studio founded by Mathias Benites Lopez and powered by a team of specialists." />
-    <!-- Activa el túnel antes de pintar para que no se vea la versión estática un instante -->
-    <script>
-      if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('tunnel-js');
-    </script>
+    <title>Devoluciones y cancelaciones — Quinvora Code</title>
+    <meta name="description" content="Política de cancelaciones y reembolsos de las membresías de RestQode y de los servicios de Quinvora Code." />
   </head>
-  <body class="page-about">
+  <body class="page-legal">
     <svg width="0" height="0" style="position:absolute" aria-hidden="true">
       <defs>
         <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5zM5 19.5A1.5 1.5 0 0 0 6.5 21H19"/></symbol>
@@ -26,7 +22,7 @@
         <nav class="desktop-nav" aria-label="Main">
           <a href="/#services">Services</a>
           <a href="/projects.html">Work</a>
-          <a href="/about.html" aria-current="page">About</a>
+          <a href="/about.html">About</a>
           <a href="/#faq">FAQ</a>
         </nav>
 
@@ -51,78 +47,65 @@
         </nav>
       </div>
 
-      <!-- ==========================================================
-           ABOUT · túnel
-           El scroll mueve la cámara a través de un paisaje de partículas.
-           Cada .tunnel__station aparece cuando el progreso llega a su
-           data-at (0 = inicio, 1 = final). Para añadir o mover paradas
-           basta con cambiar esos valores.
-           ========================================================== -->
-      <section class="tunnel" aria-label="About Quinvora Code">
-        <div class="tunnel__stage">
-          <canvas class="tunnel__canvas" aria-hidden="true"></canvas>
-          <div class="tunnel__vignette" aria-hidden="true"></div>
+      <main class="legal">
+        <div class="legal__inner">
+          <a href="/" class="legal__volver"><svg class="ico"><use href="#i-left"/></svg>Volver al inicio</a>
+          <header class="legal__cabecera">
+            <span class="legal__eyebrow">Legal</span>
+            <h1>Política de devoluciones y cancelaciones</h1>
+            <p class="legal__intro">Nuestros servicios son digitales: no hay productos físicos que devolver. Aquí explicamos cuándo puedes cancelar y en qué casos devolvemos tu dinero.</p>
+            <p class="legal__fecha">Última actualización: 9 de octubre de 2026</p>
+          </header>
 
-          <div class="tunnel__station tunnel__station--intro" data-at="0">
-            <h1 class="tunnel__hero">
-              <span class="tunnel__hero-top">We are</span>
-              <span class="tunnel__hero-bottom">Quinvora Code</span>
-            </h1>
-            <p class="tunnel__kicker">A custom software studio founded by Mathias Benites Lopez and powered by a team of specialists. This is who we are.</p>
-          </div>
+          <nav class="legal__indice" aria-label="Contenido">
+            <strong>Contenido</strong>
+            <ol><li><a href="#s1">Membresía mensual de RestQode</a></li><li><a href="#s2">Pago anual adelantado</a></li><li><a href="#s3">Proyectos a medida</a></li><li><a href="#s4">Cuándo devolvemos el 100%</a></li><li><a href="#s5">Qué no reembolsamos</a></li><li><a href="#s6">Cómo solicitarlo</a></li></ol>
+          </nav>
 
-          <div class="tunnel__station" data-at="0.15">
-            <h2 class="tunnel__title">Built around you<sup>(01)</sup></h2>
-            <p class="tunnel__kicker">We design, build and run custom web software around each business — not the other way around.</p>
-          </div>
-
-          <div class="tunnel__station" data-at="0.29">
-            <span class="tunnel__label">CEO &amp; Founder</span>
-            <h2 class="tunnel__title">Mathias Benites Lopez<sup>(02)</sup></h2>
-            <p class="tunnel__kicker">He founded Quinvora Code to give growing businesses software that truly fits the way they work.</p>
-          </div>
-
-          <div class="tunnel__station" data-at="0.43">
-            <h2 class="tunnel__title">A team of specialists<sup>(03)</sup></h2>
-            <p class="tunnel__kicker">Engineers, designers and cloud experts working as one team — from the first sketch to production.</p>
-          </div>
-
-          <div class="tunnel__station tunnel__station--left" data-at="0.555">
-            <h2 class="tunnel__title">Tailor-made<sup>(04)</sup></h2>
-            <p class="tunnel__kicker">Every feature is built for your process, your team and your customers. No templates, no workarounds.</p>
-          </div>
-
-          <div class="tunnel__station tunnel__station--right" data-at="0.655">
-            <h2 class="tunnel__title">Performance<sup>(05)</sup></h2>
-            <p class="tunnel__kicker">Fast by default: clean code, modern infrastructure and pages that load in under a second.</p>
-          </div>
-
-          <div class="tunnel__station tunnel__station--left" data-at="0.755">
-            <h2 class="tunnel__title">Control<sup>(06)</sup></h2>
-            <p class="tunnel__kicker">You own the code, the data and the roadmap — with full visibility at every step.</p>
-          </div>
-
-          <div class="tunnel__station tunnel__station--right" data-at="0.855">
-            <h2 class="tunnel__title">Flexibility<sup>(07)</sup></h2>
-            <p class="tunnel__kicker">We connect with the tools you already use and grow the platform as you scale.</p>
-          </div>
-
-          <div class="tunnel__station tunnel__station--end" data-at="1">
-            <h2 class="tunnel__title">Let’s build what’s next</h2>
-            <p class="tunnel__kicker">Tell us what your business needs. Mathias and the team will take it from there.</p>
-            <div class="tunnel__actions">
-              <a href="#contact" class="btn-glow">Start a project</a>
-              <a href="/projects.html" class="btn-soft">See our work</a>
-            </div>
-          </div>
-
-          <div class="tunnel__hud" aria-hidden="true">
-            <span class="tunnel__status">Scroll to dive in</span>
-            <div class="tunnel__rail"></div>
-            <span class="tunnel__pct">00%</span>
-          </div>
+          <section id="s1">
+            <h2>1. Membresía mensual de RestQode</h2>
+            <ul>
+              <li>Puedes cancelarla cuando quieras, escribiéndonos o desde tu cuenta. La cancelación se aplica al terminar el mes ya pagado: sigues usando el sistema hasta esa fecha y no se te vuelve a cobrar.</li>
+              <li>No se reembolsan los días que quedan del mes en curso, salvo que el servicio haya dejado de funcionar por una causa atribuible a nosotros (ver punto 4).</li>
+            </ul>
+          </section>
+          <section id="s2">
+            <h2>2. Pago anual adelantado</h2>
+            <ul>
+              <li>Si cancelas dentro de los <strong>7 días calendario</strong> siguientes al pago y el sistema todavía no se puso en marcha para tu negocio, te devolvemos el 100%.</li>
+              <li>Después de ese plazo, te devolvemos los meses completos que no hayas empezado a usar, calculados al precio mensual del plan (sin el descuento anual).</li>
+            </ul>
+          </section>
+          <section id="s3">
+            <h2>3. Proyectos a medida</h2>
+            <p>Se pagan por avances según la propuesta aceptada. Si el proyecto se cancela, se cobra el trabajo realizado hasta esa fecha y se devuelve la parte pagada que corresponda a trabajo no ejecutado.</p>
+          </section>
+          <section id="s4">
+            <h2>4. Cuándo devolvemos el 100%</h2>
+            <ul>
+              <li>Cobros duplicados o por un monto distinto al acordado.</li>
+              <li>Pagos realizados por error que nos avises dentro de los 7 días siguientes.</li>
+              <li>Falla del servicio atribuible a Quinvora Code que impida usar el sistema y que no resolvamos en un plazo razonable: devolvemos la parte proporcional del periodo afectado.</li>
+            </ul>
+          </section>
+          <section id="s5">
+            <h2>5. Qué no reembolsamos</h2>
+            <ul>
+              <li>Los pagos de servidor y base de datos que el cliente hace directamente a esos proveedores: cada proveedor aplica su propia política.</li>
+              <li>Los meses ya usados de una membresía.</li>
+            </ul>
+          </section>
+          <section id="s6">
+            <h2>6. Cómo solicitarlo</h2>
+            <ol>
+              <li>Escríbenos a <a href="mailto:soporte@quinvoracode.com">soporte@quinvoracode.com</a> indicando tu nombre, el plan o servicio, la fecha y el monto del pago y el motivo.</li>
+              <li>Te respondemos en un máximo de <strong>15 días hábiles</strong>.</li>
+              <li>Si corresponde, devolvemos el dinero por el mismo medio de pago. En los pagos con tarjeta o Yape procesados por Culqi, el abono puede tardar algunos días más según tu banco.</li>
+            </ol>
+            <p>Si no estás conforme, puedes registrar un reclamo en nuestro <a href="/libro-reclamaciones.html">Libro de Reclamaciones</a>.</p>
+          </section>
         </div>
-      </section>
+      </main>
 
       <!-- ==========================================================
            FOOTER
@@ -212,6 +195,6 @@
       </div>
     </div>
 
-    <script type="module" src="/src/about.ts"></script>
+    <script type="module" src="/src/legal.ts"></script>
   </body>
 </html>
